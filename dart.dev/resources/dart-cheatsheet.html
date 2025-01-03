@@ -1,0 +1,1167 @@
+<!doctype html><html lang="en">
+<!-- Mirrored from dart.dev/resources/dart-cheatsheet by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Dec 2024 22:17:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><script>!function(e,t,a,n){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var g=t.getElementsByTagName(a)[0],m=t.createElement(a);m.async=!0,m.src="../../www.googletagmanager.com/gtm4a44.js?id=GTM-5VSZM5J",g.parentNode.insertBefore(m,g)}(window,document,"script","dataLayer")</script><meta name="description" content="Interactively learn (or relearn) some of Dart's unique features."><title>Dart cheatsheet | Dart</title><link rel="icon" sizes="64x64" href="../assets/img/logo/dart-64.png" eleventy:ignore><link href="../assets/img/touch-icon-iphone.png" rel="apple-touch-icon" eleventy:ignore><link href="../assets/img/touch-icon-ipad.png" rel="apple-touch-icon" sizes="152x152" eleventy:ignore><link href="../assets/img/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="180x180" eleventy:ignore><link href="../assets/img/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="167x167" eleventy:ignore><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@dart_lang"><meta name="twitter:title" content="Dart cheatsheet"><meta name="twitter:description" content="Interactively learn (or relearn) some of Dart's unique features."><meta property="og:title" content="Dart cheatsheet"><meta property="og:description" content="Interactively learn (or relearn) some of Dart's unique features."><meta property="og:url" content="/resources/dart-cheatsheet/"><meta property="og:image" content="/assets/img/logo/dart-logo-for-shares.png?2" eleventy:ignore><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Google+Sans+Display:wght@400&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Google+Sans+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link rel="stylesheet" href="../assets/css/main.css"><script src="../../cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../../cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../../cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js" integrity="sha512-nlp9/l96/EpjYBx7EP7pGASVXNe80hGhYAUrjeXnu/fyF5Py0/RXav4BBNs7n5Hx1WFhOEOWSAVjGeC3oKxDVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../assets/js/os-tabs.js"></script><script src="../assets/js/utilities.js"></script><script src="../assets/js/main.js"></script><script defer="defer" src="../assets/js/inject_dartpad.js"></script><script>!function(e,a,t,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=a.createElement(t),s=a.getElementsByTagName(t)[0],o.async=1,o.src="../../www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-26406144-4","auto"),ga("send","pageview")</script></head><body class="default.html show_banner"><a id="skip" href="#site-content-title">Skip to main content</a><section id="cookie-notice"><div class="container"><p>dart.dev uses cookies from Google to deliver and enhance the quality of its services and to analyze traffic. <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">Learn more</a>.</p><button id="cookie-consent" class="btn btn-primary">OK, got it</button></div></section><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VSZM5J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><header id="page-header" class="site-header"><nav id="mainnav" class="site-header"><div id="menu-toggle"><i class="material-symbols">menu</i></div><a href="../index.html" class="brand" title="Dart"><img src="../assets/img/logo/logo-white-text.svg" alt="Dart"></a><ul class="navbar"><li><a href="../overview.html" class="nav-link">Overview</a></li><li class="mainnav__get-started"><a href="../guides.html" class="nav-link active"><span>Docs</span></a></li><li><a href="../community.html" class="nav-link">Community</a></li><li><a href="../index.html#try-dart" class="nav-link">Try Dart</a></li><li><a href="../get-dart.html" class="nav-link">Get Dart</a></li><li class="searchfield"><form action="https://dart.dev/search" class="site-header__search form-inline" id="cse-search-box"><input type="hidden" name="cx" value="011220921317074318178:_yy-tmb5t_i"> <input type="hidden" name="ie" value="UTF-8"> <input type="hidden" name="hl" value="en"> <input class="site-header__searchfield form-control search-field" type="search" name="q" id="search-main" autocomplete="off" placeholder="Search" aria-label="Search"></form></li></ul></nav></header><div class="banner"><p class="banner__text">Dart 3.6 is here! Read the <a href="https://medium.com/dartlang/announcing-dart-3-6-778dd7a80983" target="_blank">blog post</a> to learn about new features in pub and the language.</p></div><div id="sidenav"><form action="https://dart.dev/search/" class="site-header__search form-inline"><input class="site-header__searchfield form-control search-field" type="search" name="q" id="search-side" autocomplete="off" placeholder="Search" aria-label="Search"></form><div class="site-sidebar"><ul class="navbar-nav"><li class="nav-item"><a href="../overview.html" class="nav-link">Overview</a></li><li class="nav-item"><a href="../community.html" class="nav-link">Community</a></li><li class="nav-item"><a href="https://dartpad.dev/" class="nav-link">Try Dart</a></li><li class="nav-item"><a href="../get-dart.html" class="nav-link">Get Dart</a></li><li class="nav-item"><a href="../guides.html" class="nav-link">Docs</a></li><li aria-hidden="true"><div class="sidebar-primary-divider"></div></li></ul><ul class="nav flex-column"><li class="nav-item"><a class="nav-link collapsed collapsible" data-toggle="collapse" href="#sidenav-1" role="button" aria-expanded="false" aria-controls="sidenav-1">Language</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-1"><li class="nav-item"><a class="nav-link" href="../language.html">Introduction</a></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-1-2" href="#sidenav-1-2" role="button" aria-expanded="false" aria-controls="sidenav-1-2">Syntax basics</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-1-2"><li class="nav-item"><a class="nav-link" href="../language/variables.html">Variables</a></li><li class="nav-item"><a class="nav-link" href="../language/operators.html">Operators</a></li><li class="nav-item"><a class="nav-link" href="../language/comments.html">Comments</a></li><li class="nav-item"><a class="nav-link" href="../language/metadata.html">Metadata</a></li><li class="nav-item"><a class="nav-link" href="../language/libraries.html">Libraries & imports</a></li><li class="nav-item"><a class="nav-link" href="../language/keywords.html">Keywords</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-1-3" href="#sidenav-1-3" role="button" aria-expanded="false" aria-controls="sidenav-1-3">Types</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-1-3"><li class="nav-item"><a class="nav-link" href="../language/built-in-types.html">Built-in types</a></li><li class="nav-item"><a class="nav-link" href="../language/records.html">Records</a></li><li class="nav-item"><a class="nav-link" href="../language/collections.html">Collections</a></li><li class="nav-item"><a class="nav-link" href="../language/generics.html">Generics</a></li><li class="nav-item"><a class="nav-link" href="../language/typedefs.html">Typedefs</a></li><li class="nav-item"><a class="nav-link" href="../language/type-system.html">Type system</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-1-4" href="#sidenav-1-4" role="button" aria-expanded="false" aria-controls="sidenav-1-4">Patterns</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-1-4"><li class="nav-item"><a class="nav-link" href="../language/patterns.html">Overview & usage</a></li><li class="nav-item"><a class="nav-link" href="../language/pattern-types.html">Pattern types</a></li><li class="nav-item"><a class="nav-link" href="https://codelabs.developers.google.com/codelabs/dart-patterns-records" target="_blank" rel="noopener">Applied tutorial</a></li></ul></li><li class="nav-item"><a class="nav-link" href="../language/functions.html">Functions</a></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-1-6" href="#sidenav-1-6" role="button" aria-expanded="false" aria-controls="sidenav-1-6">Control flow</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-1-6"><li class="nav-item"><a class="nav-link" href="../language/loops.html">Loops</a></li><li class="nav-item"><a class="nav-link" href="../language/branches.html">Branches</a></li><li class="nav-item"><a class="nav-link" href="../language/error-handling.html">Error handling</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-1-7" href="#sidenav-1-7" role="button" aria-expanded="false" aria-controls="sidenav-1-7">Classes & objects</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-1-7"><li class="nav-item"><a class="nav-link" href="../language/classes.html">Classes</a></li><li class="nav-item"><a class="nav-link" href="../language/constructors.html">Constructors</a></li><li class="nav-item"><a class="nav-link" href="../language/methods.html">Methods</a></li><li class="nav-item"><a class="nav-link" href="../language/extend.html">Extend a class</a></li><li class="nav-item"><a class="nav-link" href="../language/mixins.html">Mixins</a></li><li class="nav-item"><a class="nav-link" href="../language/enums.html">Enums</a></li><li class="nav-item"><a class="nav-link" href="../language/extension-methods.html">Extension methods</a></li><li class="nav-item"><a class="nav-link" href="../language/extension-types.html">Extension types</a></li><li class="nav-item"><a class="nav-link" href="../language/callable-objects.html">Callable objects</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-1-8" href="#sidenav-1-8" role="button" aria-expanded="false" aria-controls="sidenav-1-8">Class modifiers</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-1-8"><li class="nav-item"><a class="nav-link" href="../language/class-modifiers.html">Overview & usage</a></li><li class="nav-item"><a class="nav-link" href="../language/class-modifiers-for-apis.html">Class modifiers for API maintainers</a></li><li class="nav-item"><a class="nav-link" href="../language/modifier-reference.html">Reference</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-1-9" href="#sidenav-1-9" role="button" aria-expanded="false" aria-controls="sidenav-1-9">Concurrency</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-1-9"><li class="nav-item"><a class="nav-link" href="../language/concurrency.html">Overview</a></li><li class="nav-item"><a class="nav-link" href="../language/async.html">Asynchronous support</a></li><li class="nav-item"><a class="nav-link" href="../language/isolates.html">Isolates</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-1-10" href="#sidenav-1-10" role="button" aria-expanded="false" aria-controls="sidenav-1-10">Null safety</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-1-10"><li class="nav-item"><a class="nav-link" href="../null-safety.html">Sound null safety</a></li><li class="nav-item"><a class="nav-link" href="../null-safety/migration-guide.html">Migrating to null safety</a></li><li class="nav-item"><a class="nav-link" href="../null-safety/understanding-null-safety.html">Understanding null safety</a></li><li class="nav-item"><a class="nav-link" href="../null-safety/unsound-null-safety.html">Unsound null safety</a></li><li class="nav-item"><a class="nav-link" href="../null-safety/faq.html">FAQ</a></li></ul></li></ul></li><li class="nav-item"><a class="nav-link collapsed collapsible" data-toggle="collapse" href="#sidenav-2" role="button" aria-expanded="false" aria-controls="sidenav-2">Core libraries</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-2"><li class="nav-item"><a class="nav-link" href="../libraries.html">Overview</a></li><li class="nav-item"><a class="nav-link" href="../libraries/dart-core.html">dart:core</a></li><li class="nav-item"><a class="nav-link" href="../libraries/dart-async.html">dart:async</a></li><li class="nav-item"><a class="nav-link" href="../libraries/dart-math.html">dart:math</a></li><li class="nav-item"><a class="nav-link" href="../libraries/dart-convert.html">dart:convert</a></li><li class="nav-item"><a class="nav-link" href="../libraries/dart-io.html">dart:io</a></li><li class="nav-item"><a class="nav-link" href="../libraries/dart-html.html">dart:html</a></li><div class="dropdown-divider"></div><li class="nav-item"><a class="nav-link" href="../libraries/collections/iterables.html">Iterable collections</a></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-2-10" href="#sidenav-2-10" role="button" aria-expanded="false" aria-controls="sidenav-2-10">Asynchronous programming</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-2-10"><li class="nav-item"><a class="nav-link" href="../libraries/async/async-await.html">Tutorial</a></li><li class="nav-item"><a class="nav-link" href="../libraries/async/futures-error-handling.html">Futures and error handling</a></li><li class="nav-item"><a class="nav-link" href="../libraries/async/using-streams.html">Using streams</a></li><li class="nav-item"><a class="nav-link" href="../libraries/async/creating-streams.html">Creating streams</a></li></ul></li></ul></li><li class="nav-item"><a class="nav-link collapsed collapsible" data-toggle="collapse" href="#sidenav-3" role="button" aria-expanded="false" aria-controls="sidenav-3">Effective Dart</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-3"><li class="nav-item"><a class="nav-link" href="../effective-dart.html">Overview</a></li><li class="nav-item"><a class="nav-link" href="../effective-dart/style.html">Style</a></li><li class="nav-item"><a class="nav-link" href="../effective-dart/documentation.html">Documentation</a></li><li class="nav-item"><a class="nav-link" href="../effective-dart/usage.html">Usage</a></li><li class="nav-item"><a class="nav-link" href="../effective-dart/design.html">Design</a></li></ul></li><li class="nav-item"><a class="nav-link collapsed collapsible" data-toggle="collapse" href="#sidenav-4" role="button" aria-expanded="false" aria-controls="sidenav-4">Packages</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-4"><li class="nav-item"><a class="nav-link" href="../tools/pub/packages.html">How to use packages</a></li><li class="nav-item"><a class="nav-link" href="useful-packages.html">Commonly used packages</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/create-packages.html">Creating packages</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/publishing.html">Publishing packages</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/writing-package-pages.html">Writing package pages</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/workspaces.html">Workspaces (monorepo support)</a></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-4-7" href="#sidenav-4-7" role="button" aria-expanded="false" aria-controls="sidenav-4-7">Package reference</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-4-7"><li class="nav-item"><a class="nav-link" href="../tools/pub/dependencies.html">Dependencies</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/glossary.html">Glossary</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/package-layout.html">Package layout conventions</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/environment-variables.html">Pub environment variables</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/pubspec.html">Pubspec file</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/troubleshoot.html">Troubleshooting pub</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/verified-publishers.html">Verified publishers</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/security-advisories.html">Security advisories</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/versioning.html">Versioning</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/custom-package-repositories.html">Custom package repositories</a></li></ul></li><li class="nav-item"><a class="nav-link" href="../tools/pub/private-files.html">What not to commit</a></li></ul></li><li class="nav-item"><a class="nav-link collapsed collapsible" data-toggle="collapse" href="#sidenav-5" role="button" aria-expanded="false" aria-controls="sidenav-5">Development</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-5"><li class="nav-item"><a class="nav-link" href="../guides/json.html">JSON</a></li><li class="nav-item"><a class="nav-link" href="language/number-representation.html">Number representation</a></li><li class="nav-item"><a class="nav-link" href="google-apis.html">Google APIs</a></li><li class="nav-item"><a class="nav-link" href="../multiplatform-apps.html">Multi-platform apps</a></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-5-5" href="#sidenav-5-5" role="button" aria-expanded="false" aria-controls="sidenav-5-5">Command-line & server apps</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-5-5"><li class="nav-item"><a class="nav-link" href="../server.html">Overview</a></li><li class="nav-item"><a class="nav-link" href="../tutorials/server/get-started.html">Get started</a></li><li class="nav-item"><a class="nav-link" href="../tutorials/server/cmdline.html">Write command-line apps</a></li><li class="nav-item"><a class="nav-link" href="../tutorials/server/fetch-data.html">Fetch data from the internet</a></li><li class="nav-item"><a class="nav-link" href="../tutorials/server/httpserver.html">Write HTTP servers</a></li><li class="nav-item"><a class="nav-link" href="../server/libraries.html">Libraries & packages</a></li><li class="nav-item"><a class="nav-link" href="../server/google-cloud.html">Google Cloud</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-5-6" href="#sidenav-5-6" role="button" aria-expanded="false" aria-controls="sidenav-5-6">Web apps</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-5-6"><li class="nav-item"><a class="nav-link" href="../web.html">Overview</a></li><li class="nav-item"><a class="nav-link" href="../web/get-started.html">Get started</a></li><li class="nav-item"><a class="nav-link" href="../web/deployment.html">Deployment</a></li><li class="nav-item"><a class="nav-link" href="../web/libraries.html">Libraries & packages</a></li><li class="nav-item"><a class="nav-link" href="../web/wasm.html">Wasm compilation</a></li></ul></li><li class="nav-item"><a class="nav-link" href="../guides/environment-declarations.html">Environment declarations</a></li></ul></li><li class="nav-item"><a class="nav-link collapsed collapsible" data-toggle="collapse" href="#sidenav-6" role="button" aria-expanded="false" aria-controls="sidenav-6">Interoperability</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-6"><li class="nav-item"><a class="nav-link" href="../interop/c-interop.html">C interop</a></li><li class="nav-item"><a class="nav-link" href="../interop/objective-c-interop.html">Objective-C & Swift interop</a></li><li class="nav-item"><a class="nav-link" href="../interop/java-interop.html">Java & Kotlin interop</a></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-6-4" href="#sidenav-6-4" role="button" aria-expanded="false" aria-controls="sidenav-6-4">JavaScript interop</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-6-4"><li class="nav-item"><a class="nav-link" href="../interop/js-interop.html">Overview</a></li><li class="nav-item"><a class="nav-link" href="../interop/js-interop/usage.html">Usage</a></li><li class="nav-item"><a class="nav-link" href="../interop/js-interop/js-types.html">JS types</a></li><li class="nav-item"><a class="nav-link" href="../interop/js-interop/tutorials.html">Tutorials</a></li><li class="nav-item"><a class="nav-link" href="../interop/js-interop/past-js-interop.html">Past JS interop</a></li><div class="dropdown-divider"></div><li class="nav-item"><a class="nav-link" href="../interop/js-interop/package-web.html">Web interop</a></li></ul></li></ul></li><li class="nav-item"><a class="nav-link collapsed collapsible" data-toggle="collapse" href="#sidenav-7" role="button" aria-expanded="false" aria-controls="sidenav-7">Tools & techniques</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-7"><li class="nav-item"><a class="nav-link" href="../tools.html">Overview</a></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-7-2" href="#sidenav-7-2" role="button" aria-expanded="false" aria-controls="sidenav-7-2">Editors & debuggers</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-7-2"><li class="nav-item"><a class="nav-link" href="../tools/jetbrains-plugin.html">IntelliJ & Android Studio</a></li><li class="nav-item"><a class="nav-link" href="../tools/vs-code.html">VS Code</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-devtools.html">Dart DevTools</a></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-7-2-4" href="#sidenav-7-2-4" role="button" aria-expanded="false" aria-controls="sidenav-7-2-4">DartPad</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-7-2-4"><li class="nav-item"><a class="nav-link" href="../tools/dartpad.html">Overview</a></li><li class="nav-item"><a class="nav-link" href="../tools/dartpad/troubleshoot.html">Troubleshooting DartPad</a></li></ul></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-7-3" href="#sidenav-7-3" role="button" aria-expanded="false" aria-controls="sidenav-7-3">Command-line tools</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-7-3"><li class="nav-item"><a class="nav-link collapsible" data-toggle="collapse" data-target="#sidenav-7-3-1" href="#sidenav-7-3-1" role="button" aria-expanded="true" aria-controls="sidenav-7-3-1">Dart SDK</a><ul class="nav flex-column flex-nowrap collapse show" id="sidenav-7-3-1"><li class="nav-item"><a class="nav-link" href="../tools/sdk.html">Overview</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-tool.html">dart</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-analyze.html">dart analyze</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-compile.html">dart compile</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-create.html">dart create</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-doc.html">dart doc</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-fix.html">dart fix</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-format.html">dart format</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-info.html">dart info</a></li><li class="nav-item"><a class="nav-link" href="../tools/pub/cmd.html">dart pub</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-run.html">dart run</a></li><li class="nav-item"><a class="nav-link" href="../tools/dart-test.html">dart test</a></li><li class="nav-item"><a class="nav-link" href="../tools/dartaotruntime.html">dartaotruntime</a></li><li class="nav-item"><a class="nav-link" href="../tools/experiment-flags.html">Experiment flags</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible" data-toggle="collapse" data-target="#sidenav-7-3-2" href="#sidenav-7-3-2" role="button" aria-expanded="true" aria-controls="sidenav-7-3-2">Other command-line tools</a><ul class="nav flex-column flex-nowrap collapse show" id="sidenav-7-3-2"><li class="nav-item"><a class="nav-link" href="../tools/build_runner.html">build_runner</a></li><li class="nav-item"><a class="nav-link" href="../tools/webdev.html">webdev</a></li></ul></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-7-4" href="#sidenav-7-4" role="button" aria-expanded="false" aria-controls="sidenav-7-4">Static analysis</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-7-4"><li class="nav-item"><a class="nav-link" href="../tools/analysis.html">Customizing static analysis</a></li><li class="nav-item"><a class="nav-link" href="../deprecated/sound-problems.html">Fixing common type problems</a></li><li class="nav-item"><a class="nav-link" href="../tools/non-promotion-reasons.html">Fixing type promotion failures</a></li><li class="nav-item"><a class="nav-link" href="../tools/linter-rules.html">Linter rules</a></li><li class="nav-item"><a class="nav-link" href="../tools/diagnostic-messages.html">Diagnostic messages</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-7-5" href="#sidenav-7-5" role="button" aria-expanded="false" aria-controls="sidenav-7-5">Testing & optimization</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-7-5"><li class="nav-item"><a class="nav-link" href="../guides/testing.html">Testing</a></li><li class="nav-item"><a class="nav-link" href="../web/debugging.html">Debugging web apps</a></li></ul></li></ul></li><li aria-hidden="true"><div class="sidebar-primary-divider"></div></li><li class="nav-item"><a class="nav-link active collapsible" data-toggle="collapse" href="#sidenav-9" role="button" aria-expanded="true" aria-controls="sidenav-9">Resources</a><ul class="nav flex-column flex-nowrap collapse show" id="sidenav-9"><li class="nav-item"><a class="nav-link active" href="dart-cheatsheet.html">Language cheatsheet</a></li><li class="nav-item"><a class="nav-link" href="breaking-changes.html">Breaking changes</a></li><li class="nav-item"><a class="nav-link" href="language/evolution.html">Language evolution</a></li><li class="nav-item"><a class="nav-link" href="language/spec.html">Language specification</a></li><li class="nav-item"><a class="nav-link" href="dart-3-migration.html">Dart 3 migration guide</a></li><li class="nav-item"><a class="nav-link collapsible collapsed" data-toggle="collapse" data-target="#sidenav-9-6" href="#sidenav-9-6" role="button" aria-expanded="false" aria-controls="sidenav-9-6">Coming from ...</a><ul class="nav flex-column flex-nowrap collapse" id="sidenav-9-6"><li class="nav-item"><a class="nav-link" href="coming-from/js-to-dart.html">JavaScript to Dart</a></li><li class="nav-item"><a class="nav-link" href="coming-from/swift-to-dart.html">Swift to Dart</a></li></ul></li><div class="dropdown-divider"></div><li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li><li class="nav-item"><a class="nav-link" href="glossary.html">Glossary</a></li><li class="nav-item"><a class="nav-link" href="books.html">Books</a></li><li class="nav-item"><a class="nav-link" href="videos.html">Videos</a></li><li class="nav-item"><a class="nav-link" href="../tutorials.html">Tutorials</a></li></ul></li><li class="nav-item"><a class="nav-link collapsible" data-toggle="collapse" href="#sidenav-10" role="button" aria-expanded="true" aria-controls="sidenav-10">Related sites</a><ul class="nav flex-column flex-nowrap collapse show" id="sidenav-10"><li class="nav-item"><a class="nav-link" href="https://api.dart.dev/" target="_blank" rel="noopener">API reference</a></li><li class="nav-item"><a class="nav-link" href="https://medium.com/dartlang" target="_blank" rel="noopener">Blog</a></li><li class="nav-item"><a class="nav-link" href="https://dartpad.dev/" target="_blank" rel="noopener">DartPad (online editor)</a></li><li class="nav-item"><a class="nav-link" href="https://flutter.dev/" target="_blank" rel="noopener">Flutter</a></li><li class="nav-item"><a class="nav-link" href="https://pub.dev/" target="_blank" rel="noopener">Package site</a></li></ul></li></ul></div></div><main id="page-content"><div id="site-toc--side" class="site-toc"><header class="site-toc__title">Contents</header><ul class="section-nav"><li class="toc-entry nav-item"><a class="nav-link" href="#string-interpolation">String interpolation</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#nullable-variables">Nullable variables</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#null-aware-operators">Null-aware operators</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#conditional-property-access">Conditional property access</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#collection-literals">Collection literals</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#arrow-syntax">Arrow syntax</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#cascades">Cascades</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#getters-and-setters">Getters and setters</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#optional-positional-parameters">Optional positional parameters</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#named-parameters">Named parameters</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#exceptions">Exceptions</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#using-this-in-a-constructor">Using this in a constructor</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#initializer-lists">Initializer lists</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#named-constructors">Named constructors</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#factory-constructors">Factory constructors</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#redirecting-constructors">Redirecting constructors</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#const-constructors">Const constructors</a></li><li class="toc-entry nav-item"><a class="nav-link" href="#whats-next">What's next?</a></li></ul></div><article><div class="content"><div id="site-content-title"><h1>Dart cheatsheet</h1></div><div id="site-toc--inline" class="site-toc toc-collapsible toc-collapsed"><header class="site-toc__title">Contents <span class="site-toc--inline__toggle toc-toggle-down"><i class="material-symbols">keyboard_arrow_down</i></span> <span class="site-toc--inline__toggle toc-toggle-up"><i class="material-symbols">keyboard_arrow_up</i></span></header><ul class="section-nav"><li class="toc-entry"><a href="#string-interpolation">String interpolation</a></li><li class="toc-entry"><a href="#nullable-variables">Nullable variables</a></li><li class="toc-entry"><a href="#null-aware-operators">Null-aware operators</a></li><li class="toc-entry"><a href="#conditional-property-access">Conditional property access</a></li><li class="toc-entry"><a href="#collection-literals">Collection literals</a></li><li class="toc-entry"><a href="#arrow-syntax">Arrow syntax</a></li><li class="toc-entry"><a href="#cascades">Cascades</a></li><li class="toc-entry"><a href="#getters-and-setters">Getters and setters</a></li><li class="toc-entry"><a href="#optional-positional-parameters">Optional positional parameters</a></li><li class="toc-entry"><a href="#named-parameters">Named parameters</a></li><li class="toc-entry"><a href="#exceptions">Exceptions</a></li><li class="toc-entry"><a href="#using-this-in-a-constructor">Using this in a constructor</a></li><li class="toc-entry"><a href="#initializer-lists">Initializer lists</a></li><li class="toc-entry"><a href="#named-constructors">Named constructors</a></li><li class="toc-entry"><a href="#factory-constructors">Factory constructors</a></li><li class="toc-entry"><a href="#redirecting-constructors">Redirecting constructors</a></li><li class="toc-entry"><a href="#const-constructors">Const constructors</a></li><li class="toc-entry"><a href="#whats-next">What's next?</a></li></ul><span class="site-toc--inline__toggle toc-toggle-more-items"><i class="material-symbols">more_horiz</i></span></div> <?code-excerpt replace="/ *\/\/\s+ignore_for_file:[^\n]+\n//g; /(^|\n) *\/\/\s+ignore:[^\n]+\n/$1/g; /(\n[^\n]+) *\/\/\s+ignore:[^\n]+\n/$1\n/g"?> <p>The Dart language is designed to be easy to learn for coders coming from other languages, but it has a few unique features. This tutorial walks you through the most important of these language features.</p><p>The embedded editors in this tutorial have partially completed code snippets. You can use these editors to test your knowledge by completing the code and clicking the <strong>Run</strong> button. The editors also contain thorough test code; <strong>don't edit the test code</strong>, but feel free to study it to learn about testing.</p><p>If you need help, expand the <strong>Solution for...</strong> dropdown beneath each DartPad for an explanation and the answer.</p><aside class="alert alert-info"><div class="alert-header"><i class="material-symbols" aria-hidden="true">info</i> <span>Note</span></div><div class="alert-content"><p>This page uses embedded DartPads to display runnable examples. If you see empty boxes instead of DartPads, go to the <a href="../tools/dartpad/troubleshoot.html">DartPad troubleshooting page</a>.</p></div></aside><div class="header-wrapper"><h2 id="string-interpolation">String interpolation</h2><a class="heading-link" href="#string-interpolation" aria-label="Link to 'String interpolation' section">#</a></div><p>To put the value of an expression inside a string, use <code>${expression}</code>. If the expression is an identifier, you can omit the <code>{}</code>.</p><p>Here are some examples of using string interpolation:</p><div class="table-wrapper"><table><thead><tr><th>String</th><th>Result</th></tr></thead><tbody><tr><td><code>'${3 + 2}'</code></td><td><code>'5'</code></td></tr><tr><td><code>'${&quot;word&quot;.toUpperCase()}'</code></td><td><code>'WORD'</code></td></tr><tr><td><code>'$myObject'</code></td><td>The value of <code>myObject.toString()</code></td></tr></tbody></table></div><div class="header-wrapper"><h3 class="no_toc" id="code-example">Code example</h3><a class="heading-link" href="#code-example" aria-label="Link to 'Code example' section">#</a></div><p>The following function takes two integers as parameters. Make it return a string containing both integers separated by a space. For example, <code>stringify(2, 3)</code> should return <code>'2 3'</code>.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">String stringify(int x, int y) {
+  TODO('Return a formatted string here');
+}
+
+
+// Tests your solution (Don't edit!): 
+void main() {
+  assert(stringify(2, 3) == '2 3',
+      &quot;Your stringify method returned '${stringify(2, 3)}' instead of '2 3'&quot;);
+  print('Success!');
+}
+</code></pre><details><summary>Solution for string interpolation example</summary><p>Both <code>x</code> and <code>y</code> are simple values, and Dart's string interpolation will handle converting them to string representations. All you need to do is use the <code>$</code> operator to reference them inside single quotes, with a space in between:</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">String</span><span style="color:#6200EE"> stringify</span><span style="color:#222222">(</span><span style="color:#0468D7">int</span><span style="color:#222222"> x, </span><span style="color:#0468D7">int</span><span style="color:#222222"> y) {</span></span>
+<span class="line"><span style="color:#D43324">  return</span><span style="color:#11796D"> '</span><span style="color:#11796D">$</span><span style="color:#222222">x</span><span style="color:#11796D"> $</span><span style="color:#222222">y</span><span style="color:#11796D">'</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="nullable-variables">Nullable variables</h2><a class="heading-link" href="#nullable-variables" aria-label="Link to 'Nullable variables' section">#</a></div><p>Dart enforces sound null safety. This means values can't be null unless you say they can be. In other words, types default to non-nullable.</p><p>For example, consider the following code. With null safety, this code returns an error. A variable of type <code>int</code> can't have the value <code>null</code>:</p> <?code-excerpt "misc/bin/cheatsheet/nullable.dart (invalid-null)" replace="/null;/[!null!];/g"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">int</span><span style="color:#222222"> a = </span><mark class="highlight"><span style="color:#11796D">null</span></mark><span style="color:#222222">; </span><span style="color:#6E6E70">// INVALID.</span></span></code></pre></div></div><p>When creating a variable, add <code>?</code> to the type to indicate that the variable can be <code>null</code>:</p> <?code-excerpt "misc/bin/cheatsheet/nullable.dart (valid-null)" replace="/int\?/[!int?!]/g"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><mark class="highlight"><span style="color:#0468D7">int</span><span style="color:#222222">?</span></mark><span style="color:#222222"> a = </span><span style="color:#11796D">null</span><span style="color:#222222">; </span><span style="color:#6E6E70">// Valid.</span></span></code></pre></div></div><p>You can simplify that code a bit because, in all versions of Dart, <code>null</code> is the default value for uninitialized variables:</p> <?code-excerpt "misc/bin/cheatsheet/nullable.dart (simple-null)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">int</span><span style="color:#222222">? a; </span><span style="color:#6E6E70">// The initial value of a is null.</span></span></code></pre></div></div><p>To learn more about null safety in Dart, read the <a href="../null-safety.html">sound null safety guide</a>.</p><div class="header-wrapper"><h3 class="no_toc" id="code-example-1">Code example</h3><a class="heading-link" href="#code-example-1" aria-label="Link to 'Code example' section">#</a></div><p>Declare two variables in this DartPad:</p><ul><li>A nullable <code>String</code> named <code>name</code> with the value <code>'Jane'</code>.</li><li>A nullable <code>String</code> named <code>address</code> with the value <code>null</code>.</li></ul><p>Ignore all initial errors in the DartPad.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">// TODO: Declare the two variables here
+
+
+// Tests your solution (Don't edit!): 
+void main() {
+  try {
+    if (name == 'Jane' &amp;&amp; address == null) {
+      // verify that &quot;name&quot; is nullable
+      name = null;
+      print('Success!');
+    } else {
+      print('Not quite right, try again!');
+    }
+  } catch (e) {
+    print('Exception: ${e.runtimeType}');
+  }
+}
+</code></pre><details><summary>Solution for nullable variables example</summary><p>Declare the two variables as <code>String</code> followed by <code>?</code>. Then, assign <code>'Jane'</code> to <code>name</code> and leave <code>address</code> uninitialized:</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">String</span><span style="color:#222222">? name = </span><span style="color:#11796D">'Jane'</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#0468D7">String</span><span style="color:#222222">? address;</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="null-aware-operators">Null-aware operators</h2><a class="heading-link" href="#null-aware-operators" aria-label="Link to 'Null-aware operators' section">#</a></div><p>Dart offers some handy operators for dealing with values that might be null. One is the <code>??=</code> assignment operator, which assigns a value to a variable only if that variable is currently null:</p> <?code-excerpt "misc/test/cheatsheet/null_aware_test.dart (null-aware-operators)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">int</span><span style="color:#222222">? a; </span><span style="color:#6E6E70">// = null</span></span>
+<span class="line"><span style="color:#222222">a ??= </span><span style="color:#11796D">3</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#6200EE">print</span><span style="color:#222222">(a); </span><span style="color:#6E6E70">// &#x3C;-- Prints 3.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#222222">a ??= </span><span style="color:#11796D">5</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#6200EE">print</span><span style="color:#222222">(a); </span><span style="color:#6E6E70">// &#x3C;-- Still prints 3.</span></span></code></pre></div></div><p>Another null-aware operator is <code>??</code>, which returns the expression on its left unless that expression's value is null, in which case it evaluates and returns the expression on its right:</p> <?code-excerpt "misc/test/cheatsheet/null_aware_test.dart (null-aware-operators-2)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#6200EE">print</span><span style="color:#222222">(</span><span style="color:#11796D">1</span><span style="color:#222222"> ?? </span><span style="color:#11796D">3</span><span style="color:#222222">); </span><span style="color:#6E6E70">// &#x3C;-- Prints 1.</span></span>
+<span class="line"><span style="color:#6200EE">print</span><span style="color:#222222">(</span><span style="color:#11796D">null</span><span style="color:#222222"> ?? </span><span style="color:#11796D">12</span><span style="color:#222222">); </span><span style="color:#6E6E70">// &#x3C;-- Prints 12.</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-2">Code example</h3><a class="heading-link" href="#code-example-2" aria-label="Link to 'Code example' section">#</a></div><p>Try substituting in the <code>??=</code> and <code>??</code> operators to implement the described behavior in the following snippet.</p><p>Ignore all initial errors in the DartPad.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">String? foo = 'a string';
+String? bar; // = null
+
+// Substitute an operator that makes 'a string' be assigned to baz.
+String? baz = foo /* TODO */ bar;
+
+void updateSomeVars() {
+  // Substitute an operator that makes 'a string' be assigned to bar.
+  bar /* TODO */ 'a string';
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  try {
+    updateSomeVars();
+    
+    if (foo != 'a string') {
+      print('Looks like foo somehow ended up with the wrong value.');
+    } else if (bar != 'a string') {
+      print('Looks like bar ended up with the wrong value.');
+    } else if (baz != 'a string') {
+      print('Looks like baz ended up with the wrong value.');
+    } else {
+      print('Success!');
+    }
+  } catch (e) {
+    print('Exception: ${e.runtimeType}.');
+  }
+  
+}
+</code></pre><details><summary>Solution for null-aware operators example</summary><p>All you need to do in this exercise is replace the <code>TODO</code> comments with either <code>??</code> or <code>??=</code>. Read the text above to make sure you understand both, and then give it a try:</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#6E6E70">// Substitute an operator that makes 'a string' be assigned to baz.</span></span>
+<span class="line"><span style="color:#0468D7">String</span><span style="color:#222222">? baz = foo ?? bar;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">void</span><span style="color:#6200EE"> updateSomeVars</span><span style="color:#222222">() {</span></span>
+<span class="line"><span style="color:#6E6E70">  // Substitute an operator that makes 'a string' be assigned to bar.</span></span>
+<span class="line"><span style="color:#222222">  bar ??= </span><span style="color:#11796D">'a string'</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="conditional-property-access">Conditional property access</h2><a class="heading-link" href="#conditional-property-access" aria-label="Link to 'Conditional property access' section">#</a></div><p>To guard access to a property or method of an object that might be null, put a question mark (<code>?</code>) before the dot (<code>.</code>):</p> <?code-excerpt "misc/test/cheatsheet/null_aware_test.dart (conditional-property-access)" replace="/result = //g; /;//g;"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#222222">myObject?.someProperty</span></span></code></pre></div></div><p>The preceding code is equivalent to the following:</p> <?code-excerpt "misc/test/cheatsheet/null_aware_test.dart (conditional-property-access-equivalent)" replace="/result = //g; /;//g;"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#222222">(myObject != </span><span style="color:#11796D">null</span><span style="color:#222222">) ? myObject.someProperty : </span><span style="color:#11796D">null</span></span></code></pre></div></div><p>You can chain multiple uses of <code>?.</code> together in a single expression:</p> <?code-excerpt "misc/test/cheatsheet/null_aware_test.dart (conditional-property-access-multiple)" replace="/result = //g; /;//g;"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#222222">myObject?.someProperty?.</span><span style="color:#6200EE">someMethod</span><span style="color:#222222">()</span></span></code></pre></div></div><p>The preceding code returns null (and never calls <code>someMethod()</code>) if either <code>myObject</code> or <code>myObject.someProperty</code> is null.</p><div class="header-wrapper"><h3 class="no_toc" id="code-example-3">Code example</h3><a class="heading-link" href="#code-example-3" aria-label="Link to 'Code example' section">#</a></div><p>The following function takes a nullable string as a parameter. Try using conditional property access to make it return the uppercase version of <code>str</code>, or <code>null</code> if <code>str</code> is <code>null</code>.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">String? upperCaseIt(String? str) {
+  // TODO: Try conditionally accessing the `toUpperCase` method here.
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  try {
+    String? one = upperCaseIt(null);
+    if (one != null) {
+      print('Looks like you\'re not returning null for null inputs.');
+    } else {
+      print('Success when str is null!');
+    }
+  } catch (e) {
+    print('Tried calling upperCaseIt(null) and got an exception: \n ${e.runtimeType}.');
+  }
+  
+  try {
+    String? two = upperCaseIt('a string');
+    if (two == null) {
+      print('Looks like you\'re returning null even when str has a value.');
+    } else if (two != 'A STRING') {
+      print('Tried upperCaseIt(\'a string\'), but didn\'t get \'A STRING\' in response.');
+    } else {
+      print('Success when str is not null!');
+    }
+  } catch (e) {
+    print('Tried calling upperCaseIt(\'a string\') and got an exception: \n ${e.runtimeType}.');
+  }
+}
+</code></pre><details><summary>Solution for conditional property access example</summary><p>If this exercise wanted you to conditionally lowercase a string, you could do it like this: <code>str?.toLowerCase()</code>. Use the equivalent method to uppercase a string!</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">String</span><span style="color:#222222">? </span><span style="color:#6200EE">upperCaseIt</span><span style="color:#222222">(</span><span style="color:#0468D7">String</span><span style="color:#222222">? str) {</span></span>
+<span class="line"><span style="color:#D43324">  return</span><span style="color:#222222"> str?.</span><span style="color:#6200EE">toUpperCase</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="collection-literals">Collection literals</h2><a class="heading-link" href="#collection-literals" aria-label="Link to 'Collection literals' section">#</a></div><p>Dart has built-in support for lists, maps, and sets. You can create them using literals:</p> <?code-excerpt "misc/test/cheatsheet/collections_test.dart (collection-literals-inferred)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aListOfStrings = [</span><span style="color:#11796D">'one'</span><span style="color:#222222">, </span><span style="color:#11796D">'two'</span><span style="color:#222222">, </span><span style="color:#11796D">'three'</span><span style="color:#222222">];</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aSetOfStrings = {</span><span style="color:#11796D">'one'</span><span style="color:#222222">, </span><span style="color:#11796D">'two'</span><span style="color:#222222">, </span><span style="color:#11796D">'three'</span><span style="color:#222222">};</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aMapOfStringsToInts = {</span></span>
+<span class="line"><span style="color:#11796D">  'one'</span><span style="color:#222222">: </span><span style="color:#11796D">1</span><span style="color:#222222">,</span></span>
+<span class="line"><span style="color:#11796D">  'two'</span><span style="color:#222222">: </span><span style="color:#11796D">2</span><span style="color:#222222">,</span></span>
+<span class="line"><span style="color:#11796D">  'three'</span><span style="color:#222222">: </span><span style="color:#11796D">3</span><span style="color:#222222">,</span></span>
+<span class="line"><span style="color:#222222">};</span></span></code></pre></div></div><p>Dart's type inference can assign types to these variables for you. In this case, the inferred types are <code>List&lt;String&gt;</code>, <code>Set&lt;String&gt;</code>, and <code>Map&lt;String, int&gt;</code>.</p><p>Or you can specify the type yourself:</p> <?code-excerpt "misc/test/cheatsheet/collections_test.dart (collection-literals-specified)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aListOfInts = &#x3C;</span><span style="color:#0468D7">int</span><span style="color:#222222">>[];</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aSetOfInts = &#x3C;</span><span style="color:#0468D7">int</span><span style="color:#222222">>{};</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aMapOfIntToDouble = &#x3C;</span><span style="color:#0468D7">int</span><span style="color:#222222">, </span><span style="color:#0468D7">double</span><span style="color:#222222">>{};</span></span></code></pre></div></div><p>Specifying types is handy when you initialize a list with contents of a subtype, but still want the list to be <code>List&lt;BaseType&gt;</code>:</p> <?code-excerpt "misc/test/cheatsheet/collections_test.dart (collection-literals-subtypes)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aListOfBaseType = &#x3C;</span><span style="color:#0468D7">BaseType</span><span style="color:#222222">>[</span><span style="color:#0468D7">SubType</span><span style="color:#222222">(), </span><span style="color:#0468D7">SubType</span><span style="color:#222222">()];</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-4">Code example</h3><a class="heading-link" href="#code-example-4" aria-label="Link to 'Code example' section">#</a></div><p>Try setting the following variables to the indicated values. Replace the existing null values.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">// Assign this a list containing 'a', 'b', and 'c' in that order:
+final aListOfStrings = null;
+
+// Assign this a set containing 3, 4, and 5:
+final aSetOfInts = null;
+
+// Assign this a map of String to int so that aMapOfStringsToInts['myKey'] returns 12:
+final aMapOfStringsToInts = null;
+
+// Assign this an empty List&lt;double&gt;:
+final anEmptyListOfDouble = null;
+
+// Assign this an empty Set&lt;String&gt;:
+final anEmptySetOfString = null;
+
+// Assign this an empty Map of double to int:
+final anEmptyMapOfDoublesToInts = null;
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  final errs = &lt;String&gt;[];
+  
+  if (aListOfStrings is! List&lt;String&gt;) {
+    errs.add('aListOfStrings should have the type List&lt;String&gt;.');
+  } else if (aListOfStrings.length != 3) {
+    errs.add('aListOfStrings has ${aListOfStrings.length} items in it, \n rather than the expected 3.');
+  } else if (aListOfStrings[0] != 'a' || aListOfStrings[1] != 'b' || aListOfStrings[2] != 'c') {
+    errs.add('aListOfStrings doesn\'t contain the correct values (\'a\', \'b\', \'c\').');
+  }
+
+  if (aSetOfInts is! Set&lt;int&gt;) {
+    errs.add('aSetOfInts should have the type Set&lt;int&gt;.');
+  } else if (aSetOfInts.length != 3) {
+    errs.add('aSetOfInts has ${aSetOfInts.length} items in it, \n rather than the expected 3.');
+  } else if (!aSetOfInts.contains(3) || !aSetOfInts.contains(4) || !aSetOfInts.contains(5)) {
+    errs.add('aSetOfInts doesn\'t contain the correct values (3, 4, 5).');
+  }
+
+  if (aMapOfStringsToInts is! Map&lt;String, int&gt;) {
+    errs.add('aMapOfStringsToInts should have the type Map&lt;String, int&gt;.');
+  } else if (aMapOfStringsToInts['myKey'] != 12) {
+    errs.add('aMapOfStringsToInts doesn\'t contain the correct values (\'myKey\': 12).');
+  }
+
+  if (anEmptyListOfDouble is! List&lt;double&gt;) {
+    errs.add('anEmptyListOfDouble should have the type List&lt;double&gt;.');
+  } else if (anEmptyListOfDouble.isNotEmpty) {
+    errs.add('anEmptyListOfDouble should be empty.');
+  }
+
+  if (anEmptySetOfString is! Set&lt;String&gt;) {
+    errs.add('anEmptySetOfString should have the type Set&lt;String&gt;.');
+  } else if (anEmptySetOfString.isNotEmpty) {
+    errs.add('anEmptySetOfString should be empty.');
+  }
+
+  if (anEmptyMapOfDoublesToInts is! Map&lt;double, int&gt;) {
+    errs.add('anEmptyMapOfDoublesToInts should have the type Map&lt;double, int&gt;.');
+  } else if (anEmptyMapOfDoublesToInts.isNotEmpty) {
+    errs.add('anEmptyMapOfDoublesToInts should be empty.');
+  }
+
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+
+  // ignore_for_file: unnecessary_type_check
+}
+</code></pre><details><summary>Solution for collection literals example</summary><p>Add a list, set, or map literal after each equals sign. Remember to specify the types for the empty declarations, since they can't be inferred.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#6E6E70">// Assign this a list containing 'a', 'b', and 'c' in that order:</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aListOfStrings = [</span><span style="color:#11796D">'a'</span><span style="color:#222222">, </span><span style="color:#11796D">'b'</span><span style="color:#222222">, </span><span style="color:#11796D">'c'</span><span style="color:#222222">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">// Assign this a set containing 3, 4, and 5:</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aSetOfInts = {</span><span style="color:#11796D">3</span><span style="color:#222222">, </span><span style="color:#11796D">4</span><span style="color:#222222">, </span><span style="color:#11796D">5</span><span style="color:#222222">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">// Assign this a map of String to int so that aMapOfStringsToInts['myKey'] returns 12:</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> aMapOfStringsToInts = {</span><span style="color:#11796D">'myKey'</span><span style="color:#222222">: </span><span style="color:#11796D">12</span><span style="color:#222222">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">// Assign this an empty List&#x3C;double>:</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> anEmptyListOfDouble = &#x3C;</span><span style="color:#0468D7">double</span><span style="color:#222222">>[];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">// Assign this an empty Set&#x3C;String>:</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> anEmptySetOfString = &#x3C;</span><span style="color:#0468D7">String</span><span style="color:#222222">>{};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">// Assign this an empty Map of double to int:</span></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> anEmptyMapOfDoublesToInts = &#x3C;</span><span style="color:#0468D7">double</span><span style="color:#222222">, </span><span style="color:#0468D7">int</span><span style="color:#222222">>{};</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="arrow-syntax">Arrow syntax</h2><a class="heading-link" href="#arrow-syntax" aria-label="Link to 'Arrow syntax' section">#</a></div><p>You might have seen the <code>=&gt;</code> symbol in Dart code. This arrow syntax is a way to define a function that executes the expression to its right and returns its value.</p><p>For example, consider this call to the <code>List</code> class's <code>any()</code> method:</p> <?code-excerpt "misc/test/cheatsheet/arrow_functions_test.dart (has-empty-long)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">bool</span><span style="color:#222222"> hasEmpty = aListOfStrings.</span><span style="color:#6200EE">any</span><span style="color:#222222">((s) {</span></span>
+<span class="line"><span style="color:#D43324">  return</span><span style="color:#222222"> s.isEmpty;</span></span>
+<span class="line"><span style="color:#222222">});</span></span></code></pre></div></div><p>Here's a simpler way to write that code:</p> <?code-excerpt "misc/test/cheatsheet/arrow_functions_test.dart (has-empty-short)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">bool</span><span style="color:#222222"> hasEmpty = aListOfStrings.</span><span style="color:#6200EE">any</span><span style="color:#222222">((s) => s.isEmpty);</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-5">Code example</h3><a class="heading-link" href="#code-example-5" aria-label="Link to 'Code example' section">#</a></div><p>Try finishing the following statements, which use arrow syntax.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class MyClass {
+  int value1 = 2;
+  int value2 = 3;
+  int value3 = 5;
+  
+  // Returns the product of the above values:
+  int get product =&gt; TODO();
+  
+  // Adds 1 to value1:
+  void incrementValue1() =&gt; TODO();
+  
+  // Returns a string containing each item in the
+  // list, separated by commas (e.g. 'a,b,c'): 
+  String joinWithCommas(List&lt;String&gt; strings) =&gt; TODO();
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  final obj = MyClass();
+  final errs = &lt;String&gt;[];
+  
+  try {
+    final product = obj.product;
+    
+    if (product != 30) {
+      errs.add('The product property returned $product \n instead of the expected value (30).'); 
+    } 
+  } catch (e) {
+    print('Tried to use MyClass.product, but encountered an exception: \n ${e.runtimeType}.');
+    return;
+  }
+
+  try {
+    obj.incrementValue1();
+    
+    if (obj.value1 != 3) {
+      errs.add('After calling incrementValue, value1 was ${obj.value1} \n instead of the expected value (3).'); 
+    } 
+  } catch (e) {
+    print('Tried to use MyClass.incrementValue1, but encountered an exception: \n ${e.runtimeType}.');
+    return;
+  }
+
+  try {
+    final joined = obj.joinWithCommas(['one', 'two', 'three']);
+    
+    if (joined != 'one,two,three') {
+      errs.add('Tried calling joinWithCommas([\'one\', \'two\', \'three\']) \n and received $joined instead of the expected value (\'one,two,three\').'); 
+    } 
+  } catch (e) {
+    print('Tried to use MyClass.joinWithCommas, but encountered an exception: \n ${e.runtimeType}.');
+    return;
+  }
+
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for arrow syntax example</summary><p>For the product, you can use <code>*</code> to multiply the three values together. For <code>incrementValue1</code>, you can use the increment operator (<code>++</code>). For <code>joinWithCommas</code>, use the <code>join</code> method found in the <code>List</code> class.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> MyClass</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> value1 = </span><span style="color:#11796D">2</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> value2 = </span><span style="color:#11796D">3</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> value3 = </span><span style="color:#11796D">5</span><span style="color:#222222">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">  // Returns the product of the above values:</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#D43324"> get</span><span style="color:#222222"> product => value1 * value2 * value3;</span></span>
+<span class="line"><span style="color:#222222">  </span></span>
+<span class="line"><span style="color:#6E6E70">  // Adds 1 to value1:</span></span>
+<span class="line"><span style="color:#D43324">  void</span><span style="color:#6200EE"> incrementValue1</span><span style="color:#222222">() => value1++; </span></span>
+<span class="line"><span style="color:#222222">  </span></span>
+<span class="line"><span style="color:#6E6E70">  // Returns a string containing each item in the</span></span>
+<span class="line"><span style="color:#6E6E70">  // list, separated by commas (e.g. 'a,b,c'): </span></span>
+<span class="line"><span style="color:#0468D7">  String</span><span style="color:#6200EE"> joinWithCommas</span><span style="color:#222222">(</span><span style="color:#0468D7">List</span><span style="color:#222222">&#x3C;</span><span style="color:#0468D7">String</span><span style="color:#222222">> strings) => strings.</span><span style="color:#6200EE">join</span><span style="color:#222222">(</span><span style="color:#11796D">','</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="cascades">Cascades</h2><a class="heading-link" href="#cascades" aria-label="Link to 'Cascades' section">#</a></div><p>To perform a sequence of operations on the same object, use cascades (<code>..</code>). We've all seen an expression like this:</p> <?code-excerpt "misc/bin/cheatsheet/cascades.dart (no-cascade)" replace="/;//g"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#222222">myObject.</span><span style="color:#6200EE">someMethod</span><span style="color:#222222">()</span></span></code></pre></div></div><p>It invokes <code>someMethod()</code> on <code>myObject</code>, and the result of the expression is the return value of <code>someMethod()</code>.</p><p>Here's the same expression with a cascade:</p> <?code-excerpt "misc/bin/cheatsheet/cascades.dart (uses-cascade)" replace="/;//g"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#222222">myObject..</span><span style="color:#6200EE">someMethod</span><span style="color:#222222">()</span></span></code></pre></div></div><p>Although it still invokes <code>someMethod()</code> on <code>myObject</code>, the result of the expression <strong>isn't</strong> the return value—it's a reference to <code>myObject</code>!</p><p>Using cascades, you can chain together operations that would otherwise require separate statements. For example, consider the following code, which uses the conditional member access operator (<code>?.</code>) to read properties of <code>button</code> if it isn't <code>null</code>:</p> <?code-excerpt "misc/bin/cheatsheet/cascades.dart (query-without-cascades)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">var</span><span style="color:#222222"> button = </span><span style="color:#6200EE">querySelector</span><span style="color:#222222">(</span><span style="color:#11796D">'#confirm'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">button?.text = </span><span style="color:#11796D">'Confirm'</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#222222">button?.classes.</span><span style="color:#6200EE">add</span><span style="color:#222222">(</span><span style="color:#11796D">'important'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">button?.onClick.</span><span style="color:#6200EE">listen</span><span style="color:#222222">((e) => window.</span><span style="color:#6200EE">alert</span><span style="color:#222222">(</span><span style="color:#11796D">'Confirmed!'</span><span style="color:#222222">));</span></span>
+<span class="line"><span style="color:#222222">button?.</span><span style="color:#6200EE">scrollIntoView</span><span style="color:#222222">();</span></span></code></pre></div></div><p>To instead use cascades, you can start with the <em>null-shorting</em> cascade (<code>?..</code>), which guarantees that none of the cascade operations are attempted on a <code>null</code> object. Using cascades shortens the code and makes the <code>button</code> variable unnecessary:</p> <?code-excerpt "misc/bin/cheatsheet/cascades.dart (query-with-cascades)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#6200EE">querySelector</span><span style="color:#222222">(</span><span style="color:#11796D">'#confirm'</span><span style="color:#222222">)</span></span>
+<span class="line"><span style="color:#222222">  ?..text = </span><span style="color:#11796D">'Confirm'</span></span>
+<span class="line"><span style="color:#222222">  ..classes.</span><span style="color:#6200EE">add</span><span style="color:#222222">(</span><span style="color:#11796D">'important'</span><span style="color:#222222">)</span></span>
+<span class="line"><span style="color:#222222">  ..onClick.</span><span style="color:#6200EE">listen</span><span style="color:#222222">((e) => window.</span><span style="color:#6200EE">alert</span><span style="color:#222222">(</span><span style="color:#11796D">'Confirmed!'</span><span style="color:#222222">))</span></span>
+<span class="line"><span style="color:#222222">  ..</span><span style="color:#6200EE">scrollIntoView</span><span style="color:#222222">();</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-6">Code example</h3><a class="heading-link" href="#code-example-6" aria-label="Link to 'Code example' section">#</a></div><p>Use cascades to create a single statement that sets the <code>anInt</code>, <code>aString</code>, and <code>aList</code> properties of a <code>BigObject</code> to <code>1</code>, <code>'String!'</code>, and <code>[3.0]</code> (respectively) and then calls <code>allDone()</code>.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class BigObject {
+  int anInt = 0;
+  String aString = '';
+  List&lt;double&gt; aList = [];
+  bool _done = false;
+  
+  void allDone() {
+    _done = true;
+  }
+}
+
+BigObject fillBigObject(BigObject obj) {
+  // Create a single statement that will update and return obj:
+  return TODO('obj..');
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  BigObject obj;
+
+  try {
+    obj = fillBigObject(BigObject());
+  } catch (e) {
+    print('Caught an exception of type ${e.runtimeType} \n while running fillBigObject');
+    return;
+  }
+
+  final errs = &lt;String&gt;[];
+
+  if (obj.anInt != 1) {
+    errs.add(
+        'The value of anInt was ${obj.anInt} \n rather than the expected (1).');
+  }
+
+  if (obj.aString != 'String!') {
+    errs.add(
+        'The value of aString was \'${obj.aString}\' \n rather than the expected (\'String!\').');
+  }
+
+  if (obj.aList.length != 1) {
+    errs.add(
+        'The length of aList was ${obj.aList.length} \n rather than the expected value (1).');
+  } else {
+    if (obj.aList[0] != 3.0) {
+      errs.add(
+          'The value found in aList was ${obj.aList[0]} \n rather than the expected (3.0).');
+    }
+  }
+  
+  if (!obj._done) {
+    errs.add('It looks like allDone() wasn\'t called.');
+  }
+
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for cascades example</summary><p>The best solution for this exercise starts with <code>obj..</code> and has four assignment operations chained together. Start with <code>return obj..anInt = 1</code>, then add another cascade (<code>..</code>) and start the next assignment.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">BigObject</span><span style="color:#6200EE"> fillBigObject</span><span style="color:#222222">(</span><span style="color:#0468D7">BigObject</span><span style="color:#222222"> obj) {</span></span>
+<span class="line"><span style="color:#D43324">  return</span><span style="color:#222222"> obj</span></span>
+<span class="line"><span style="color:#222222">    ..anInt = </span><span style="color:#11796D">1</span></span>
+<span class="line"><span style="color:#222222">    ..aString = </span><span style="color:#11796D">'String!'</span></span>
+<span class="line"><span style="color:#222222">    ..aList.</span><span style="color:#6200EE">add</span><span style="color:#222222">(</span><span style="color:#11796D">3</span><span style="color:#222222">)</span></span>
+<span class="line"><span style="color:#222222">    ..</span><span style="color:#6200EE">allDone</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="getters-and-setters">Getters and setters</h2><a class="heading-link" href="#getters-and-setters" aria-label="Link to 'Getters and setters' section">#</a></div><p>You can define getters and setters whenever you need more control over a property than a simple field allows.</p><p>For example, you can make sure a property's value is valid:</p> <?code-excerpt "misc/lib/cheatsheet/getters_setters.dart"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> MyClass</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> _aProperty = </span><span style="color:#11796D">0</span><span style="color:#222222">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#D43324"> get</span><span style="color:#222222"> aProperty => _aProperty;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">  set</span><span style="color:#6200EE"> aProperty</span><span style="color:#222222">(</span><span style="color:#0468D7">int</span><span style="color:#222222"> value) {</span></span>
+<span class="line"><span style="color:#D43324">    if</span><span style="color:#222222"> (value >= </span><span style="color:#11796D">0</span><span style="color:#222222">) {</span></span>
+<span class="line"><span style="color:#222222">      _aProperty = value;</span></span>
+<span class="line"><span style="color:#222222">    }</span></span>
+<span class="line"><span style="color:#222222">  }</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><p>You can also use a getter to define a computed property:</p> <?code-excerpt "misc/lib/cheatsheet/getter_compute.dart"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> MyClass</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#D43324">  final</span><span style="color:#0468D7"> List</span><span style="color:#222222">&#x3C;</span><span style="color:#0468D7">int</span><span style="color:#222222">> _values = [];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">  void</span><span style="color:#6200EE"> addValue</span><span style="color:#222222">(</span><span style="color:#0468D7">int</span><span style="color:#222222"> value) {</span></span>
+<span class="line"><span style="color:#222222">    _values.</span><span style="color:#6200EE">add</span><span style="color:#222222">(value);</span></span>
+<span class="line"><span style="color:#222222">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">  // A computed property.</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#D43324"> get</span><span style="color:#222222"> count {</span></span>
+<span class="line"><span style="color:#D43324">    return</span><span style="color:#222222"> _values.length;</span></span>
+<span class="line"><span style="color:#222222">  }</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-7">Code example</h3><a class="heading-link" href="#code-example-7" aria-label="Link to 'Code example' section">#</a></div><p>Imagine you have a shopping cart class that keeps a private <code>List&lt;double&gt;</code> of prices. Add the following:</p><ul><li>A getter called <code>total</code> that returns the sum of the prices</li><li>A setter that replaces the list with a new one, as long as the new list doesn't contain any negative prices (in which case the setter should throw an <code>InvalidPriceException</code>).</li></ul><p>Ignore all initial errors in the DartPad.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class InvalidPriceException {}
+
+class ShoppingCart {
+  List&lt;double&gt; _prices = [];
+  
+  // TODO: Add a &quot;total&quot; getter here:
+
+  // TODO: Add a &quot;prices&quot; setter here:
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  var foundException = false;
+  
+  try {
+    final cart = ShoppingCart();
+    cart.prices = [12.0, 12.0, -23.0];
+  } on InvalidPriceException {
+    foundException = true;
+  } catch (e) {
+    print('Tried setting a negative price and received a ${e.runtimeType} \n instead of an InvalidPriceException.');
+    return;
+  }
+  
+  if (!foundException) {
+    print('Tried setting a negative price \n and didn\'t get an InvalidPriceException.');
+    return;
+  }
+  
+  final secondCart = ShoppingCart();
+  
+  try {
+    secondCart.prices = [1.0, 2.0, 3.0];
+  } catch(e) {
+    print('Tried setting prices with a valid list, \n but received an exception: ${e.runtimeType}.');
+    return;
+  }
+  
+  if (secondCart._prices.length != 3) {
+    print('Tried setting prices with a list of three values, \n but _prices ended up having length ${secondCart._prices.length}.');
+    return;
+  }
+
+  if (secondCart._prices[0] != 1.0 || secondCart._prices[1] != 2.0 || secondCart._prices[2] != 3.0) {
+    final vals = secondCart._prices.map((p) =&gt; p.toString()).join(', ');
+    print('Tried setting prices with a list of three values (1, 2, 3), \n but incorrect ones ended up in the price list ($vals) .');
+    return;
+  }
+  
+  var sum = 0.0;
+  
+  try {
+    sum = secondCart.total;
+  } catch (e) {
+    print('Tried to get total, but received an exception: ${e.runtimeType}.');
+    return;
+  }
+  
+  if (sum != 6.0) {
+    print('After setting prices to (1, 2, 3), total returned $sum instead of 6.');
+    return;
+  }
+  
+  print('Success!');
+}
+</code></pre><details><summary>Solution for getters and setters example</summary><p>Two functions are handy for this exercise. One is <code>fold</code>, which can reduce a list to a single value (use it to calculate the total). The other is <code>any</code>, which can check each item in a list with a function you give it (use it to check if there are any negative prices in the prices setter).</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#6E6E70">// Add a "total" getter here:</span></span>
+<span class="line"><span style="color:#0468D7">double</span><span style="color:#D43324"> get</span><span style="color:#222222"> total => _prices.</span><span style="color:#6200EE">fold</span><span style="color:#222222">(</span><span style="color:#11796D">0</span><span style="color:#222222">, (e, t) => e + t);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">// Add a "prices" setter here:</span></span>
+<span class="line"><span style="color:#D43324">set</span><span style="color:#6200EE"> prices</span><span style="color:#222222">(</span><span style="color:#0468D7">List</span><span style="color:#222222">&#x3C;</span><span style="color:#0468D7">double</span><span style="color:#222222">> value) {</span></span>
+<span class="line"><span style="color:#D43324">  if</span><span style="color:#222222"> (value.</span><span style="color:#6200EE">any</span><span style="color:#222222">((p) => p &#x3C; </span><span style="color:#11796D">0</span><span style="color:#222222">)) {</span></span>
+<span class="line"><span style="color:#D43324">    throw</span><span style="color:#0468D7"> InvalidPriceException</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">  }</span></span>
+<span class="line"><span style="color:#222222">  </span></span>
+<span class="line"><span style="color:#222222">  _prices = value;</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="optional-positional-parameters">Optional positional parameters</h2><a class="heading-link" href="#optional-positional-parameters" aria-label="Link to 'Optional positional parameters' section">#</a></div><p>Dart has two kinds of function parameters: positional and named. Positional parameters are the kind you're likely familiar with:</p> <?code-excerpt "misc/lib/cheatsheet/optional_positional_args.dart (optional-positional-args)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">int</span><span style="color:#6200EE"> sumUp</span><span style="color:#222222">(</span><span style="color:#0468D7">int</span><span style="color:#222222"> a, </span><span style="color:#0468D7">int</span><span style="color:#222222"> b, </span><span style="color:#0468D7">int</span><span style="color:#222222"> c) {</span></span>
+<span class="line"><span style="color:#D43324">  return</span><span style="color:#222222"> a + b + c;</span></span>
+<span class="line"><span style="color:#222222">}</span></span>
+<span class="line"><span style="color:#6E6E70">  // ···</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> total = </span><span style="color:#6200EE">sumUp</span><span style="color:#222222">(</span><span style="color:#11796D">1</span><span style="color:#222222">, </span><span style="color:#11796D">2</span><span style="color:#222222">, </span><span style="color:#11796D">3</span><span style="color:#222222">);</span></span></code></pre></div></div><p>With Dart, you can make these positional parameters optional by wrapping them in brackets:</p> <?code-excerpt "misc/lib/cheatsheet/optional_positional_args.dart (optional-positional-args-2)" replace="/total2/total/g"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">int</span><span style="color:#6200EE"> sumUpToFive</span><span style="color:#222222">(</span><span style="color:#0468D7">int</span><span style="color:#222222"> a, [</span><span style="color:#0468D7">int</span><span style="color:#222222">? b, </span><span style="color:#0468D7">int</span><span style="color:#222222">? c, </span><span style="color:#0468D7">int</span><span style="color:#222222">? d, </span><span style="color:#0468D7">int</span><span style="color:#222222">? e]) {</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> sum = a;</span></span>
+<span class="line"><span style="color:#D43324">  if</span><span style="color:#222222"> (b != </span><span style="color:#11796D">null</span><span style="color:#222222">) sum += b;</span></span>
+<span class="line"><span style="color:#D43324">  if</span><span style="color:#222222"> (c != </span><span style="color:#11796D">null</span><span style="color:#222222">) sum += c;</span></span>
+<span class="line"><span style="color:#D43324">  if</span><span style="color:#222222"> (d != </span><span style="color:#11796D">null</span><span style="color:#222222">) sum += d;</span></span>
+<span class="line"><span style="color:#D43324">  if</span><span style="color:#222222"> (e != </span><span style="color:#11796D">null</span><span style="color:#222222">) sum += e;</span></span>
+<span class="line"><span style="color:#D43324">  return</span><span style="color:#222222"> sum;</span></span>
+<span class="line"><span style="color:#222222">}</span></span>
+<span class="line"><span style="color:#6E6E70">  // ···</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> total = </span><span style="color:#6200EE">sumUpToFive</span><span style="color:#222222">(</span><span style="color:#11796D">1</span><span style="color:#222222">, </span><span style="color:#11796D">2</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> otherTotal = </span><span style="color:#6200EE">sumUpToFive</span><span style="color:#222222">(</span><span style="color:#11796D">1</span><span style="color:#222222">, </span><span style="color:#11796D">2</span><span style="color:#222222">, </span><span style="color:#11796D">3</span><span style="color:#222222">, </span><span style="color:#11796D">4</span><span style="color:#222222">, </span><span style="color:#11796D">5</span><span style="color:#222222">);</span></span></code></pre></div></div><p>Optional positional parameters are always last in a function's parameter list. Their default value is null unless you provide another default value:</p> <?code-excerpt "misc/lib/cheatsheet/optional_positional_args2.dart (sum-no-impl)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">int</span><span style="color:#6200EE"> sumUpToFive</span><span style="color:#222222">(</span><span style="color:#0468D7">int</span><span style="color:#222222"> a, [</span><span style="color:#0468D7">int</span><span style="color:#222222"> b = </span><span style="color:#11796D">2</span><span style="color:#222222">, </span><span style="color:#0468D7">int</span><span style="color:#222222"> c = </span><span style="color:#11796D">3</span><span style="color:#222222">, </span><span style="color:#0468D7">int</span><span style="color:#222222"> d = </span><span style="color:#11796D">4</span><span style="color:#222222">, </span><span style="color:#0468D7">int</span><span style="color:#222222"> e = </span><span style="color:#11796D">5</span><span style="color:#222222">]) {</span></span>
+<span class="line"><span style="color:#6E6E70">  // ···</span></span>
+<span class="line"><span style="color:#222222">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">void</span><span style="color:#6200EE"> main</span><span style="color:#222222">() {</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> newTotal = </span><span style="color:#6200EE">sumUpToFive</span><span style="color:#222222">(</span><span style="color:#11796D">1</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#6200EE">  print</span><span style="color:#222222">(newTotal); </span><span style="color:#6E6E70">// &#x3C;-- prints 15</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-8">Code example</h3><a class="heading-link" href="#code-example-8" aria-label="Link to 'Code example' section">#</a></div><p>Implement a function called <code>joinWithCommas()</code> that accepts one to five integers, then returns a string of those numbers separated by commas. Here are some examples of function calls and returned values:</p><div class="table-wrapper"><table><thead><tr><th>Function call</th><th>Returned value</th></tr></thead><tbody><tr><td><code>joinWithCommas(1)</code></td><td><code>'1'</code></td></tr><tr><td><code>joinWithCommas(1, 2, 3)</code></td><td><code>'1,2,3'</code></td></tr><tr><td><code>joinWithCommas(1, 1, 1, 1, 1)</code></td><td><code>'1,1,1,1,1'</code></td></tr></tbody></table></div><br><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">String joinWithCommas(int a, [int? b, int? c, int? d, int? e]) {
+  return TODO();
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  final errs = &lt;String&gt;[];
+  
+  try {
+    final value = joinWithCommas(1);
+    
+    if (value != '1') {
+      errs.add('Tried calling joinWithCommas(1) \n and got $value instead of the expected (\'1\').'); 
+    } 
+  } on UnimplementedError {
+    print('Tried to call joinWithCommas but failed. \n Did you implement the method?');
+    return;
+  } catch (e) {
+    print('Tried calling joinWithCommas(1), \n but encountered an exception: ${e.runtimeType}.');
+    return;
+  }
+
+  try {
+    final value = joinWithCommas(1, 2, 3);
+    
+    if (value != '1,2,3') {
+      errs.add('Tried calling joinWithCommas(1, 2, 3) \n and got $value instead of the expected (\'1,2,3\').'); 
+    } 
+  } on UnimplementedError {
+    print('Tried to call joinWithCommas but failed. \n Did you implement the method?');
+    return;
+  } catch (e) {
+    print('Tried calling joinWithCommas(1, 2 ,3), \n but encountered an exception: ${e.runtimeType}.');
+    return;
+  }
+
+  try {
+    final value = joinWithCommas(1, 2, 3, 4, 5);
+    
+    if (value != '1,2,3,4,5') {
+      errs.add('Tried calling joinWithCommas(1, 2, 3, 4, 5) \n and got $value instead of the expected (\'1,2,3,4,5\').'); 
+    } 
+  } on UnimplementedError {
+    print('Tried to call joinWithCommas but failed. \n Did you implement the method?');
+    return;
+  } catch (e) {
+    print('Tried calling stringify(1, 2, 3, 4 ,5), \n but encountered an exception: ${e.runtimeType}.');
+    return;
+  }
+
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for positional parameters example</summary><p>The <code>b</code>, <code>c</code>, <code>d</code>, and <code>e</code> parameters are null if they aren't provided by the caller. The important thing, then, is to check whether those arguments are <code>null</code> before you add them to the final string.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">String</span><span style="color:#6200EE"> joinWithCommas</span><span style="color:#222222">(</span><span style="color:#0468D7">int</span><span style="color:#222222"> a, [</span><span style="color:#0468D7">int</span><span style="color:#222222">? b, </span><span style="color:#0468D7">int</span><span style="color:#222222">? c, </span><span style="color:#0468D7">int</span><span style="color:#222222">? d, </span><span style="color:#0468D7">int</span><span style="color:#222222">? e]) {</span></span>
+<span class="line"><span style="color:#D43324">  var</span><span style="color:#222222"> total = </span><span style="color:#11796D">'</span><span style="color:#11796D">$</span><span style="color:#222222">a</span><span style="color:#11796D">'</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#D43324">  if</span><span style="color:#222222"> (b != </span><span style="color:#11796D">null</span><span style="color:#222222">) total = </span><span style="color:#11796D">'</span><span style="color:#11796D">$</span><span style="color:#222222">total</span><span style="color:#11796D">,</span><span style="color:#11796D">$</span><span style="color:#222222">b</span><span style="color:#11796D">'</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#D43324">  if</span><span style="color:#222222"> (c != </span><span style="color:#11796D">null</span><span style="color:#222222">) total = </span><span style="color:#11796D">'</span><span style="color:#11796D">$</span><span style="color:#222222">total</span><span style="color:#11796D">,</span><span style="color:#11796D">$</span><span style="color:#222222">c</span><span style="color:#11796D">'</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#D43324">  if</span><span style="color:#222222"> (d != </span><span style="color:#11796D">null</span><span style="color:#222222">) total = </span><span style="color:#11796D">'</span><span style="color:#11796D">$</span><span style="color:#222222">total</span><span style="color:#11796D">,</span><span style="color:#11796D">$</span><span style="color:#222222">d</span><span style="color:#11796D">'</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#D43324">  if</span><span style="color:#222222"> (e != </span><span style="color:#11796D">null</span><span style="color:#222222">) total = </span><span style="color:#11796D">'</span><span style="color:#11796D">$</span><span style="color:#222222">total</span><span style="color:#11796D">,</span><span style="color:#11796D">$</span><span style="color:#222222">e</span><span style="color:#11796D">'</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#D43324">  return</span><span style="color:#222222"> total;</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div></details><p><a id="optional-named-parameters"></a></p><div class="header-wrapper"><h2 id="named-parameters">Named parameters</h2><a class="heading-link" href="#named-parameters" aria-label="Link to 'Named parameters' section">#</a></div><p>Using a curly brace syntax at the end of the parameter list, you can define parameters that have names.</p><p>Named parameters are optional unless they're explicitly marked as <code>required</code>.</p> <?code-excerpt "misc/lib/cheatsheet/named_parameters.dart"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">void</span><span style="color:#6200EE"> printName</span><span style="color:#222222">(</span><span style="color:#0468D7">String</span><span style="color:#222222"> firstName, </span><span style="color:#0468D7">String</span><span style="color:#222222"> lastName, {</span><span style="color:#0468D7">String</span><span style="color:#222222">? middleName}) {</span></span>
+<span class="line"><span style="color:#6200EE">  print</span><span style="color:#222222">(</span><span style="color:#11796D">'</span><span style="color:#11796D">$</span><span style="color:#222222">firstName</span><span style="color:#11796D"> ${</span><span style="color:#222222">middleName</span><span style="color:#11796D"> ?? </span><span style="color:#11796D">''</span><span style="color:#11796D">}</span><span style="color:#11796D"> $</span><span style="color:#222222">lastName</span><span style="color:#11796D">'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">void</span><span style="color:#6200EE"> main</span><span style="color:#222222">() {</span></span>
+<span class="line"><span style="color:#6200EE">  printName</span><span style="color:#222222">(</span><span style="color:#11796D">'Dash'</span><span style="color:#222222">, </span><span style="color:#11796D">'Dartisan'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#6200EE">  printName</span><span style="color:#222222">(</span><span style="color:#11796D">'John'</span><span style="color:#222222">, </span><span style="color:#11796D">'Smith'</span><span style="color:#222222">, middleName: </span><span style="color:#11796D">'Who'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#6E6E70">  // Named arguments can be placed anywhere in the argument list</span></span>
+<span class="line"><span style="color:#6200EE">  printName</span><span style="color:#222222">(</span><span style="color:#11796D">'John'</span><span style="color:#222222">, middleName: </span><span style="color:#11796D">'Who'</span><span style="color:#222222">, </span><span style="color:#11796D">'Smith'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><p>As you might expect, the default value of a nullable named parameter is <code>null</code>, but you can provide a custom default value.</p><p>If the type of a parameter is non-nullable, then you must either provide a default value (as shown in the following code) or mark the parameter as <code>required</code> (as shown in the <a href="#using-this-in-a-constructor">constructor section</a>).</p> <?code-excerpt "misc/test/cheatsheet/arguments_test.dart (defaulted-middle)" replace="/ = ''/[! = ''!]/g;"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">void</span><span style="color:#6200EE"> printName</span><span style="color:#222222">(</span><span style="color:#0468D7">String</span><span style="color:#222222"> firstName, </span><span style="color:#0468D7">String</span><span style="color:#222222"> lastName, {</span><span style="color:#0468D7">String</span><span style="color:#222222"> middleName</span><mark class="highlight"><span style="color:#222222"> = </span><span style="color:#11796D">''</span></mark><span style="color:#222222">}) {</span></span>
+<span class="line"><span style="color:#6200EE">  print</span><span style="color:#222222">(</span><span style="color:#11796D">'</span><span style="color:#11796D">$</span><span style="color:#222222">firstName</span><span style="color:#11796D"> $</span><span style="color:#222222">middleName</span><span style="color:#11796D"> $</span><span style="color:#222222">lastName</span><span style="color:#11796D">'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><p>A function can't have both optional positional and named parameters.</p><div class="header-wrapper"><h3 class="no_toc" id="code-example-9">Code example</h3><a class="heading-link" href="#code-example-9" aria-label="Link to 'Code example' section">#</a></div><p>Add a <code>copyWith()</code> instance method to the <code>MyDataObject</code> class. It should take three named, nullable parameters:</p><ul><li><code>int? newInt</code></li><li><code>String? newString</code></li><li><code>double? newDouble</code></li></ul><p>Your <code>copyWith()</code> method should return a new <code>MyDataObject</code> based on the current instance, with data from the preceding parameters (if any) copied into the object's properties. For example, if <code>newInt</code> is non-null, then copy its value into <code>anInt</code>.</p><p>Ignore all initial errors in the DartPad.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class MyDataObject {
+  final int anInt;
+  final String aString;
+  final double aDouble;
+
+  MyDataObject({
+     this.anInt = 1,
+     this.aString = 'Old!',
+     this.aDouble = 2.0,
+  });
+
+  // TODO: Add your copyWith method here:
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  final source = MyDataObject();
+  final errs = &lt;String&gt;[];
+  
+  try {
+    final copy = source.copyWith(newInt: 12, newString: 'New!', newDouble: 3.0);
+    
+    if (copy.anInt != 12) {
+      errs.add('Called copyWith(newInt: 12, newString: \'New!\', newDouble: 3.0), \n and the new object\'s anInt was ${copy.anInt} rather than the expected value (12).');
+    }
+    
+    if (copy.aString != 'New!') {
+      errs.add('Called copyWith(newInt: 12, newString: \'New!\', newDouble: 3.0), \n and the new object\'s aString was ${copy.aString} rather than the expected value (\'New!\').');
+    }
+    
+    if (copy.aDouble != 3) {
+      errs.add('Called copyWith(newInt: 12, newString: \'New!\', newDouble: 3.0), \n and the new object\'s aDouble was ${copy.aDouble} rather than the expected value (3).');
+    }
+  } catch (e) {
+    print('Called copyWith(newInt: 12, newString: \'New!\', newDouble: 3.0) \n and got an exception: ${e.runtimeType}');
+  }
+  
+  try {
+    final copy = source.copyWith();
+    
+    if (copy.anInt != 1) {
+      errs.add('Called copyWith(), and the new object\'s anInt was ${copy.anInt} \n rather than the expected value (1).');
+    }
+    
+    if (copy.aString != 'Old!') {
+      errs.add('Called copyWith(), and the new object\'s aString was ${copy.aString} \n rather than the expected value (\'Old!\').');
+    }
+    
+    if (copy.aDouble != 2) {
+      errs.add('Called copyWith(), and the new object\'s aDouble was ${copy.aDouble} \n rather than the expected value (2).');
+    }
+  } catch (e) {
+    print('Called copyWith() and got an exception: ${e.runtimeType}');
+  }
+  
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for named parameters example</summary><p>The <code>copyWith</code> method shows up in a lot of classes and libraries. Yours should do a few things: use optional named parameters, create a new instance of <code>MyDataObject</code>, and use the data from the parameters to fill it (or the data from the current instance if the parameters are null). This is a chance to get more practice with the <code>??</code> operator!</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">  MyDataObject</span><span style="color:#6200EE"> copyWith</span><span style="color:#222222">({</span><span style="color:#0468D7">int</span><span style="color:#222222">? newInt, </span><span style="color:#0468D7">String</span><span style="color:#222222">? newString, </span><span style="color:#0468D7">double</span><span style="color:#222222">? newDouble}) {</span></span>
+<span class="line"><span style="color:#D43324">    return</span><span style="color:#0468D7"> MyDataObject</span><span style="color:#222222">(</span></span>
+<span class="line"><span style="color:#222222">      anInt: newInt ?? </span><span style="color:#D43324">this</span><span style="color:#222222">.anInt,</span></span>
+<span class="line"><span style="color:#222222">      aString: newString ?? </span><span style="color:#D43324">this</span><span style="color:#222222">.aString,</span></span>
+<span class="line"><span style="color:#222222">      aDouble: newDouble ?? </span><span style="color:#D43324">this</span><span style="color:#222222">.aDouble,</span></span>
+<span class="line"><span style="color:#222222">    );</span></span>
+<span class="line"><span style="color:#222222">  }</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="exceptions">Exceptions</h2><a class="heading-link" href="#exceptions" aria-label="Link to 'Exceptions' section">#</a></div><p>Dart code can throw and catch exceptions. In contrast to Java, all of Dart's exceptions are unchecked. Methods don't declare which exceptions they might throw and you aren't required to catch any exceptions.</p><p>Dart provides <code>Exception</code> and <code>Error</code> types, but you're allowed to throw any non-null object:</p> <?code-excerpt "misc/test/cheatsheet/exceptions_test.dart (simple-throws)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">throw</span><span style="color:#0468D7"> Exception</span><span style="color:#222222">(</span><span style="color:#11796D">'Something bad happened.'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#D43324">throw</span><span style="color:#11796D"> 'Waaaaaaah!'</span><span style="color:#222222">;</span></span></code></pre></div></div><p>Use the <code>try</code>, <code>on</code>, and <code>catch</code> keywords when handling exceptions:</p> <?code-excerpt "misc/test/cheatsheet/exceptions_test.dart (try-on-catch)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">try</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#6200EE">  breedMoreLlamas</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">} </span><span style="color:#D43324">on</span><span style="color:#0468D7"> OutOfLlamasException</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#6E6E70">  // A specific exception</span></span>
+<span class="line"><span style="color:#6200EE">  buyMoreLlamas</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">} </span><span style="color:#D43324">on</span><span style="color:#0468D7"> Exception</span><span style="color:#D43324"> catch</span><span style="color:#222222"> (e) {</span></span>
+<span class="line"><span style="color:#6E6E70">  // Anything else that is an exception</span></span>
+<span class="line"><span style="color:#6200EE">  print</span><span style="color:#222222">(</span><span style="color:#11796D">'Unknown exception: </span><span style="color:#11796D">$</span><span style="color:#222222">e</span><span style="color:#11796D">'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">} </span><span style="color:#D43324">catch</span><span style="color:#222222"> (e) {</span></span>
+<span class="line"><span style="color:#6E6E70">  // No specified type, handles all</span></span>
+<span class="line"><span style="color:#6200EE">  print</span><span style="color:#222222">(</span><span style="color:#11796D">'Something really unknown: </span><span style="color:#11796D">$</span><span style="color:#222222">e</span><span style="color:#11796D">'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><p>The <code>try</code> keyword works as it does in most other languages. Use the <code>on</code> keyword to filter for specific exceptions by type, and the <code>catch</code> keyword to get a reference to the exception object.</p><p>If you can't completely handle the exception, use the <code>rethrow</code> keyword to propagate the exception:</p> <?code-excerpt "misc/test/cheatsheet/exceptions_test.dart (try-catch)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">try</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#6200EE">  breedMoreLlamas</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">} </span><span style="color:#D43324">catch</span><span style="color:#222222"> (e) {</span></span>
+<span class="line"><span style="color:#6200EE">  print</span><span style="color:#222222">(</span><span style="color:#11796D">'I was just trying to breed llamas!'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#D43324">  rethrow</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><p>To execute code whether or not an exception is thrown, use <code>finally</code>:</p> <?code-excerpt "misc/test/cheatsheet/exceptions_test.dart (try-catch-finally)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">try</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#6200EE">  breedMoreLlamas</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">} </span><span style="color:#D43324">catch</span><span style="color:#222222"> (e) {</span></span>
+<span class="line"><span style="color:#6E6E70">  // ... handle exception ...</span></span>
+<span class="line"><span style="color:#222222">} </span><span style="color:#D43324">finally</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#6E6E70">  // Always clean up, even if an exception is thrown.</span></span>
+<span class="line"><span style="color:#6200EE">  cleanLlamaStalls</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-10">Code example</h3><a class="heading-link" href="#code-example-10" aria-label="Link to 'Code example' section">#</a></div><p>Implement <code>tryFunction()</code> below. It should execute an untrustworthy method and then do the following:</p><ul><li>If <code>untrustworthy()</code> throws an <code>ExceptionWithMessage</code>, call <code>logger.logException</code> with the exception type and message (try using <code>on</code> and <code>catch</code>).</li><li>If <code>untrustworthy()</code> throws an <code>Exception</code>, call <code>logger.logException</code> with the exception type (try using <code>on</code> for this one).</li><li>If <code>untrustworthy()</code> throws any other object, don't catch the exception.</li><li>After everything's caught and handled, call <code>logger.doneLogging</code> (try using <code>finally</code>).</li></ul><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">typedef VoidFunction = void Function();
+
+class ExceptionWithMessage {
+  final String message;
+  const ExceptionWithMessage(this.message);
+}
+
+// Call logException to log an exception, and doneLogging when finished.
+abstract class Logger {
+  void logException(Type t, [String? msg]);
+  void doneLogging();
+}
+
+void tryFunction(VoidFunction untrustworthy, Logger logger) {
+  try {
+    untrustworthy();
+  } on ExceptionWithMessage catch (e) {
+    logger.logException(e.runtimeType, e.message); 
+  } on Exception catch (e) {
+    logger.logException(e.runtimeType);
+  } finally {
+    logger.doneLogging();
+  }
+}
+
+// Tests your solution (Don't edit!):
+class MyLogger extends Logger {
+  Type? lastType;
+  String lastMessage = '';
+  bool done = false;
+  
+  void logException(Type t, [String? message]) {
+    lastType = t;
+    lastMessage = message ?? lastMessage;
+  }
+  
+  void doneLogging() =&gt; done = true;  
+}
+
+void main() {
+  final errs = &lt;String&gt;[];
+  var logger = MyLogger();
+  
+  try {
+    tryFunction(() =&gt; throw Exception(), logger);
+  
+    if ('${logger.lastType}' != 'Exception' &amp;&amp; '${logger.lastType}' != '_Exception') {
+      errs.add('Untrustworthy threw an Exception, but a different type was logged: \n ${logger.lastType}.');
+    }
+    
+    if (logger.lastMessage != '') {
+      errs.add('Untrustworthy threw an Exception with no message, but a message \n was logged anyway: \'${logger.lastMessage}\'.');
+    }
+    
+    if (!logger.done) {
+      errs.add('Untrustworthy threw an Exception, \n and doneLogging() wasn\'t called afterward.');
+    }
+  } catch (e) {
+    print('Untrustworthy threw an exception, and an exception of type \n ${e.runtimeType} was unhandled by tryFunction.');
+  }
+  
+  logger = MyLogger();
+  
+  try {
+    tryFunction(() =&gt; throw ExceptionWithMessage('Hey!'), logger);
+  
+    if (logger.lastType != ExceptionWithMessage) {
+      errs.add('Untrustworthy threw an ExceptionWithMessage(\'Hey!\'), but a \n different type was logged: ${logger.lastType}.');
+    }
+    
+    if (logger.lastMessage != 'Hey!') {
+      errs.add('Untrustworthy threw an ExceptionWithMessage(\'Hey!\'), but a \n different message was logged: \'${logger.lastMessage}\'.');
+    }
+    
+    if (!logger.done) {
+      errs.add('Untrustworthy threw an ExceptionWithMessage(\'Hey!\'), \n and doneLogging() wasn\'t called afterward.');
+    }
+  } catch (e) {
+    print('Untrustworthy threw an ExceptionWithMessage(\'Hey!\'), \n and an exception of type ${e.runtimeType} was unhandled by tryFunction.');
+  }
+  
+  logger = MyLogger();
+  bool caughtStringException = false;
+
+  try {
+    tryFunction(() =&gt; throw 'A String', logger);
+  } on String {
+    caughtStringException = true;
+  }
+
+  if (!caughtStringException) {
+    errs.add('Untrustworthy threw a string, and it was incorrectly handled inside tryFunction().');
+  }
+  
+  logger = MyLogger();
+  
+  try {
+    tryFunction(() {}, logger);
+  
+    if (logger.lastType != null) {
+      errs.add('Untrustworthy didn\'t throw an Exception, \n but one was logged anyway: ${logger.lastType}.');
+    }
+    
+    if (logger.lastMessage != '') {
+      errs.add('Untrustworthy didn\'t throw an Exception with no message, \n but a message was logged anyway: \'${logger.lastMessage}\'.');
+    }
+    
+    if (!logger.done) {
+      errs.add('Untrustworthy didn\'t throw an Exception, \n but doneLogging() wasn\'t called afterward.');
+    }
+  } catch (e) {
+    print('Untrustworthy didn\'t throw an exception, \n but an exception of type ${e.runtimeType} was unhandled by tryFunction anyway.');
+  }
+  
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for exceptions example</summary><p>This exercise looks tricky, but it's really one big <code>try</code> statement. Call <code>untrustworthy</code> inside the <code>try</code>, and then use <code>on</code>, <code>catch</code>, and <code>finally</code> to catch exceptions and call methods on the logger.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">void</span><span style="color:#6200EE"> tryFunction</span><span style="color:#222222">(</span><span style="color:#0468D7">VoidFunction</span><span style="color:#222222"> untrustworthy, </span><span style="color:#0468D7">Logger</span><span style="color:#222222"> logger) {</span></span>
+<span class="line"><span style="color:#D43324">  try</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#6200EE">    untrustworthy</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">  } </span><span style="color:#D43324">on</span><span style="color:#0468D7"> ExceptionWithMessage</span><span style="color:#D43324"> catch</span><span style="color:#222222"> (e) {</span></span>
+<span class="line"><span style="color:#222222">    logger.</span><span style="color:#6200EE">logException</span><span style="color:#222222">(e.runtimeType, e.message);</span></span>
+<span class="line"><span style="color:#222222">  } </span><span style="color:#D43324">on</span><span style="color:#0468D7"> Exception</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#222222">    logger.</span><span style="color:#6200EE">logException</span><span style="color:#222222">(</span><span style="color:#0468D7">Exception</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">  } </span><span style="color:#D43324">finally</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#222222">    logger.</span><span style="color:#6200EE">doneLogging</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#222222">  }</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="using-this-in-a-constructor">Using <code>this</code> in a constructor</h2><a class="heading-link" href="#using-this-in-a-constructor" aria-label="Link to 'Using this in a constructor' section">#</a></div><p>Dart provides a handy shortcut for assigning values to properties in a constructor: use <code>this.propertyName</code> when declaring the constructor:</p> <?code-excerpt "misc/lib/cheatsheet/this_constructor.dart (required-positional)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> MyColor</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> red;</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> green;</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> blue;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0468D7">  MyColor</span><span style="color:#222222">(</span><span style="color:#D43324">this</span><span style="color:#222222">.red, </span><span style="color:#D43324">this</span><span style="color:#222222">.green, </span><span style="color:#D43324">this</span><span style="color:#222222">.blue);</span></span>
+<span class="line"><span style="color:#222222">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> color = </span><span style="color:#0468D7">MyColor</span><span style="color:#222222">(</span><span style="color:#11796D">80</span><span style="color:#222222">, </span><span style="color:#11796D">80</span><span style="color:#222222">, </span><span style="color:#11796D">128</span><span style="color:#222222">);</span></span></code></pre></div></div><p>This technique works for named parameters, too. Property names become the names of the parameters:</p> <?code-excerpt "misc/lib/cheatsheet/this_constructor.dart (required-named)" replace="/int.*;/.../g; /olorRN/olor/g;"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> MyColor</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#222222">  ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0468D7">  MyColor</span><span style="color:#222222">({</span><span style="color:#D43324">required</span><span style="color:#D43324"> this</span><span style="color:#222222">.red, </span><span style="color:#D43324">required</span><span style="color:#D43324"> this</span><span style="color:#222222">.green, </span><span style="color:#D43324">required</span><span style="color:#D43324"> this</span><span style="color:#222222">.blue});</span></span>
+<span class="line"><span style="color:#222222">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> color = </span><span style="color:#0468D7">MyColor</span><span style="color:#222222">(red: </span><span style="color:#11796D">80</span><span style="color:#222222">, green: </span><span style="color:#11796D">80</span><span style="color:#222222">, blue: </span><span style="color:#11796D">80</span><span style="color:#222222">);</span></span></code></pre></div></div><p>In the preceding code, <code>red</code>, <code>green</code>, and <code>blue</code> are marked as <code>required</code> because these <code>int</code> values can't be null. If you add default values, you can omit <code>required</code>:</p> <?code-excerpt "misc/lib/cheatsheet/this_constructor.dart (defaulted)" replace="/olorO/olor/g; /.positional//g; /.named//g;"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">MyColor</span><span style="color:#222222">([</span><span style="color:#D43324">this</span><span style="color:#222222">.red = </span><span style="color:#11796D">0</span><span style="color:#222222">, </span><span style="color:#D43324">this</span><span style="color:#222222">.green = </span><span style="color:#11796D">0</span><span style="color:#222222">, </span><span style="color:#D43324">this</span><span style="color:#222222">.blue = </span><span style="color:#11796D">0</span><span style="color:#222222">]);</span></span>
+<span class="line"><span style="color:#6E6E70">// or</span></span>
+<span class="line"><span style="color:#0468D7">MyColor</span><span style="color:#222222">({</span><span style="color:#D43324">this</span><span style="color:#222222">.red = </span><span style="color:#11796D">0</span><span style="color:#222222">, </span><span style="color:#D43324">this</span><span style="color:#222222">.green = </span><span style="color:#11796D">0</span><span style="color:#222222">, </span><span style="color:#D43324">this</span><span style="color:#222222">.blue = </span><span style="color:#11796D">0</span><span style="color:#222222">});</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-11">Code example</h3><a class="heading-link" href="#code-example-11" aria-label="Link to 'Code example' section">#</a></div><p>Add a one-line constructor to <code>MyClass</code> that uses <code>this.</code> syntax to receive and assign values for all three properties of the class.</p><p>Ignore all initial errors in the DartPad.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class MyClass {
+  final int anInt;
+  final String aString;
+  final double aDouble;
+  
+  // TODO: Create the constructor here.
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  final errs = &lt;String&gt;[];
+  
+  try {
+    final obj = MyClass(1, 'two', 3);
+    
+    if (obj.anInt != 1) {
+      errs.add('Called MyClass(1, \'two\', 3) and got an object with anInt of ${obj.anInt} \n instead of the expected value (1).');
+    }
+
+    if (obj.anInt != 1) {
+      errs.add('Called MyClass(1, \'two\', 3) and got an object with aString of \'${obj.aString}\' \n instead of the expected value (\'two\').');
+    }
+
+    if (obj.anInt != 1) {
+      errs.add('Called MyClass(1, \'two\', 3) and got an object with aDouble of ${obj.aDouble} \n instead of the expected value (3).');
+    }
+  } catch (e) {
+    print('Called MyClass(1, \'two\', 3) and got an exception \n of type ${e.runtimeType}.');
+  }
+  
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for `this` example</summary><p>This exercise has a one-line solution. Declare the constructor with <code>this.anInt</code>, <code>this.aString</code>, and <code>this.aDouble</code> as its parameters in that order.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">MyClass</span><span style="color:#222222">(</span><span style="color:#D43324">this</span><span style="color:#222222">.anInt, </span><span style="color:#D43324">this</span><span style="color:#222222">.aString, </span><span style="color:#D43324">this</span><span style="color:#222222">.aDouble);</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="initializer-lists">Initializer lists</h2><a class="heading-link" href="#initializer-lists" aria-label="Link to 'Initializer lists' section">#</a></div><p>Sometimes when you implement a constructor, you need to do some setup before the constructor body executes. For example, final fields must have values before the constructor body executes. Do this work in an initializer list, which goes between the constructor's signature and its body:</p> <?code-excerpt "misc/lib/language_tour/classes/point_alt.dart (initializer-list-no-comment)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">Point</span><span style="color:#222222">.</span><span style="color:#6200EE">fromJson</span><span style="color:#222222">(</span><span style="color:#0468D7">Map</span><span style="color:#222222">&#x3C;</span><span style="color:#0468D7">String</span><span style="color:#222222">, </span><span style="color:#0468D7">double</span><span style="color:#222222">> json)</span></span>
+<span class="line"><span style="color:#222222">    : x = json[</span><span style="color:#11796D">'x'</span><span style="color:#222222">]!,</span></span>
+<span class="line"><span style="color:#222222">      y = json[</span><span style="color:#11796D">'y'</span><span style="color:#222222">]! {</span></span>
+<span class="line"><span style="color:#6200EE">  print</span><span style="color:#222222">(</span><span style="color:#11796D">'In Point.fromJson(): (</span><span style="color:#11796D">$</span><span style="color:#222222">x</span><span style="color:#11796D">, </span><span style="color:#11796D">$</span><span style="color:#222222">y</span><span style="color:#11796D">)'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><p>The initializer list is also a handy place to put asserts, which run only during development:</p> <?code-excerpt "misc/lib/cheatsheet/initializer_lists.dart (assert)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">NonNegativePoint</span><span style="color:#222222">(</span><span style="color:#D43324">this</span><span style="color:#222222">.x, </span><span style="color:#D43324">this</span><span style="color:#222222">.y)</span></span>
+<span class="line"><span style="color:#222222">    : </span><span style="color:#D43324">assert</span><span style="color:#222222">(x >= </span><span style="color:#11796D">0</span><span style="color:#222222">),</span></span>
+<span class="line"><span style="color:#D43324">      assert</span><span style="color:#222222">(y >= </span><span style="color:#11796D">0</span><span style="color:#222222">) {</span></span>
+<span class="line"><span style="color:#6200EE">  print</span><span style="color:#222222">(</span><span style="color:#11796D">'I just made a NonNegativePoint: (</span><span style="color:#11796D">$</span><span style="color:#222222">x</span><span style="color:#11796D">, </span><span style="color:#11796D">$</span><span style="color:#222222">y</span><span style="color:#11796D">)'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-12">Code example</h3><a class="heading-link" href="#code-example-12" aria-label="Link to 'Code example' section">#</a></div><p>Complete the <code>FirstTwoLetters</code> constructor below. Use an initializer list to assign the first two characters in <code>word</code> to the <code>letterOne</code> and <code>LetterTwo</code> properties. For extra credit, add an <code>assert</code> to catch words of less than two characters.</p><p>Ignore all initial errors in the DartPad.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class FirstTwoLetters {
+  final String letterOne;
+  final String letterTwo;
+
+  // TODO: Create a constructor with an initializer list here:
+  FirstTwoLetters(String word)
+
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  final errs = &lt;String&gt;[];
+
+  try {
+    final result = FirstTwoLetters('My String');
+    
+    if (result.letterOne != 'M') {
+      errs.add('Called FirstTwoLetters(\'My String\') and got an object with \n letterOne equal to \'${result.letterOne}\' instead of the expected value (\'M\').');
+    }
+
+    if (result.letterTwo != 'y') {
+      errs.add('Called FirstTwoLetters(\'My String\') and got an object with \n letterTwo equal to \'${result.letterTwo}\' instead of the expected value (\'y\').');
+    }
+  } catch (e) {
+    errs.add('Called FirstTwoLetters(\'My String\') and got an exception \n of type ${e.runtimeType}.');
+  }
+
+  bool caughtException = false;
+  
+  try {
+    FirstTwoLetters('');
+  } catch (e) {
+    caughtException = true;
+  }
+  
+  if (!caughtException) {
+    errs.add('Called FirstTwoLetters(\'\') and didn\'t get an exception \n from the failed assertion.');
+  }
+  
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for initializer lists example</summary><p>Two assignments need to happen: <code>letterOne</code> should be assigned <code>word[0]</code>, and <code>letterTwo</code> should be assigned <code>word[1]</code>.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">  FirstTwoLetters</span><span style="color:#222222">(</span><span style="color:#0468D7">String</span><span style="color:#222222"> word)</span></span>
+<span class="line"><span style="color:#222222">      : </span><span style="color:#D43324">assert</span><span style="color:#222222">(word.length >= </span><span style="color:#11796D">2</span><span style="color:#222222">),</span></span>
+<span class="line"><span style="color:#222222">        letterOne = word[</span><span style="color:#11796D">0</span><span style="color:#222222">],</span></span>
+<span class="line"><span style="color:#222222">        letterTwo = word[</span><span style="color:#11796D">1</span><span style="color:#222222">];</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="named-constructors">Named constructors</h2><a class="heading-link" href="#named-constructors" aria-label="Link to 'Named constructors' section">#</a></div><p>To allow classes to have multiple constructors, Dart supports named constructors:</p> <?code-excerpt "misc/lib/cheatsheet/named_constructor.dart (point-class)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> Point</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#0468D7">  double</span><span style="color:#222222"> x, y;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0468D7">  Point</span><span style="color:#222222">(</span><span style="color:#D43324">this</span><span style="color:#222222">.x, </span><span style="color:#D43324">this</span><span style="color:#222222">.y);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#0468D7">  Point</span><span style="color:#222222">.</span><span style="color:#6200EE">origin</span><span style="color:#222222">()</span></span>
+<span class="line"><span style="color:#222222">      : x = </span><span style="color:#11796D">0</span><span style="color:#222222">,</span></span>
+<span class="line"><span style="color:#222222">        y = </span><span style="color:#11796D">0</span><span style="color:#222222">;</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><p>To use a named constructor, invoke it using its full name:</p> <?code-excerpt "misc/test/cheatsheet/constructor_test.dart (origin-point)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">final</span><span style="color:#222222"> myPoint = </span><span style="color:#0468D7">Point</span><span style="color:#222222">.</span><span style="color:#6200EE">origin</span><span style="color:#222222">();</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-13">Code example</h3><a class="heading-link" href="#code-example-13" aria-label="Link to 'Code example' section">#</a></div><p>Give the <code>Color</code> class a constructor named <code>Color.black</code> that sets all three properties to zero.</p><p>Ignore all initial errors in the DartPad.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class Color {
+  int red;
+  int green;
+  int blue;
+  
+  Color(this.red, this.green, this.blue);
+
+  // TODO: Create a named constructor called &quot;Color.black&quot; here:
+
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  final errs = &lt;String&gt;[];
+
+  try {
+    final result = Color.black();
+    
+    if (result.red != 0) {
+      errs.add('Called Color.black() and got a Color with red equal to \n ${result.red} instead of the expected value (0).');
+    }
+
+    if (result.green != 0) {
+      errs.add('Called Color.black() and got a Color with green equal to \n ${result.green} instead of the expected value (0).');
+    }
+
+    if (result.blue != 0) {
+  errs.add('Called Color.black() and got a Color with blue equal to \n ${result.blue} instead of the expected value (0).');
+    }
+  } catch (e) {
+    print('Called Color.black() and got an exception of type \n ${e.runtimeType}.');
+    return;
+  }
+
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for named constructors example</summary><p>The declaration for your constructor should begin with <code>Color.black():</code>. In the initializer list (after the colon), set <code>red</code>, <code>green</code>, and <code>blue</code> to <code>0</code>.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">  Color</span><span style="color:#222222">.</span><span style="color:#6200EE">black</span><span style="color:#222222">()</span></span>
+<span class="line"><span style="color:#222222">      : red = </span><span style="color:#11796D">0</span><span style="color:#222222">,</span></span>
+<span class="line"><span style="color:#222222">        green = </span><span style="color:#11796D">0</span><span style="color:#222222">,</span></span>
+<span class="line"><span style="color:#222222">        blue = </span><span style="color:#11796D">0</span><span style="color:#222222">;</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="factory-constructors">Factory constructors</h2><a class="heading-link" href="#factory-constructors" aria-label="Link to 'Factory constructors' section">#</a></div><p>Dart supports factory constructors, which can return subtypes or even null. To create a factory constructor, use the <code>factory</code> keyword:</p> <?code-excerpt "misc/lib/cheatsheet/factory_constructors.dart"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> Square</span><span style="color:#D43324"> extends</span><span style="color:#0468D7"> Shape</span><span style="color:#222222"> {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> Circle</span><span style="color:#D43324"> extends</span><span style="color:#0468D7"> Shape</span><span style="color:#222222"> {}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> Shape</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#0468D7">  Shape</span><span style="color:#222222">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">  factory</span><span style="color:#0468D7"> Shape</span><span style="color:#222222">.</span><span style="color:#6200EE">fromTypeName</span><span style="color:#222222">(</span><span style="color:#0468D7">String</span><span style="color:#222222"> typeName) {</span></span>
+<span class="line"><span style="color:#D43324">    if</span><span style="color:#222222"> (typeName == </span><span style="color:#11796D">'square'</span><span style="color:#222222">) </span><span style="color:#D43324">return</span><span style="color:#0468D7"> Square</span><span style="color:#222222">();</span></span>
+<span class="line"><span style="color:#D43324">    if</span><span style="color:#222222"> (typeName == </span><span style="color:#11796D">'circle'</span><span style="color:#222222">) </span><span style="color:#D43324">return</span><span style="color:#0468D7"> Circle</span><span style="color:#222222">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">    throw</span><span style="color:#0468D7"> ArgumentError</span><span style="color:#222222">(</span><span style="color:#11796D">'Unrecognized </span><span style="color:#11796D">$</span><span style="color:#222222">typeName</span><span style="color:#11796D">'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">  }</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-14">Code example</h3><a class="heading-link" href="#code-example-14" aria-label="Link to 'Code example' section">#</a></div><p>Replace the line <code>TODO();</code> in the factory constructor named <code>IntegerHolder.fromList</code> to return the following:</p><ul><li>If the list has <strong>one</strong> value, create an <code>IntegerSingle</code> instance using that value.</li><li>If the list has <strong>two</strong> values, create an <code>IntegerDouble</code> instance using the values in order.</li><li>If the list has <strong>three</strong> values, create an <code>IntegerTriple</code> instance using the values in order.</li><li>Otherwise, throw an <code>Error</code>.</li></ul><p>If you succeed, the console should display <code>Success!</code>.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class IntegerHolder {
+  IntegerHolder();
+  
+  // Implement this factory constructor.
+  factory IntegerHolder.fromList(List&lt;int&gt; list) {
+    TODO();
+  }
+}
+
+class IntegerSingle extends IntegerHolder {
+  final int a;
+
+  IntegerSingle(this.a);
+}
+
+class IntegerDouble extends IntegerHolder {
+  final int a;
+  final int b;
+
+  IntegerDouble(this.a, this.b);
+}
+
+class IntegerTriple extends IntegerHolder {
+  final int a;
+  final int b;
+  final int c;
+
+  IntegerTriple(this.a, this.b, this.c);
+}
+
+// Tests your solution (Don't edit from this point to end of file):
+void main() {
+  final errs = &lt;String&gt;[];
+
+  // Run 5 tests to see which values have valid integer holders
+  for (var tests = 0; tests &lt; 5; tests++) {
+    if (!testNumberOfArgs(errs, tests)) return;
+  }
+
+  // The goal is no errors with values 1 to 3,
+  // but have errors with values 0 and 4.
+  // The testNumberOfArgs method adds to the errs array if
+  // the values 1 to 3 have an error and
+  // the values 0 and 4 don't have an error
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+
+bool testNumberOfArgs(List&lt;String&gt; errs, int count) {
+  bool _threw = false;
+  final ex = List.generate(count, (index) =&gt; index + 1);
+  final callTxt = &quot;IntegerHolder.fromList(${ex})&quot;;
+  try {
+    final obj = IntegerHolder.fromList(ex);
+    final String vals = count == 1 ? &quot;value&quot; : &quot;values&quot;;
+    // Uncomment the next line if you want to see the results realtime
+    // print(&quot;Testing with ${count} ${vals} using ${obj.runtimeType}.&quot;);
+    testValues(errs, ex, obj, callTxt);
+  } on Error {
+    _threw = true;
+  } catch (e) {
+    switch (count) {
+      case (&lt; 1 &amp;&amp; &gt; 3):
+        if (!_threw) {
+          errs.add('Called ${callTxt} and it didn\'t throw an Error.');
+        }
+      default:
+        errs.add('Called $callTxt and received an Error.');
+    }
+  }
+  return true;
+}
+
+void testValues(List&lt;String&gt; errs, List&lt;int&gt; expectedValues, IntegerHolder obj,
+    String callText) {
+  for (var i = 0; i &lt; expectedValues.length; i++) {
+    int found;
+    if (obj is IntegerSingle) {
+      found = obj.a;
+    } else if (obj is IntegerDouble) {
+      found = i == 0 ? obj.a : obj.b;
+    } else if (obj is IntegerTriple) {
+      found = i == 0
+          ? obj.a
+          : i == 1
+              ? obj.b
+              : obj.c;
+    } else {
+      throw ArgumentError(
+          &quot;This IntegerHolder type (${obj.runtimeType}) is unsupported.&quot;);
+    }
+
+    if (found != expectedValues[i]) {
+      errs.add(
+          &quot;Called $callText and got a ${obj.runtimeType} &quot; + 
+          &quot;with a property at index $i value of $found &quot; +
+          &quot;instead of the expected (${expectedValues[i]}).&quot;);
+    }
+  }
+}
+
+</code></pre><details><summary>Solution for factory constructors example</summary><p>Inside the factory constructor, check the length of the list, then create and return an <code>IntegerSingle</code>, <code>IntegerDouble</code>, or <code>IntegerTriple</code> as appropriate.</p><p>Replace <code>TODO();</code> with the following code block.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">  switch</span><span style="color:#222222"> (list.length) {</span></span>
+<span class="line"><span style="color:#D43324">    case</span><span style="color:#11796D"> 1</span><span style="color:#222222">:</span></span>
+<span class="line"><span style="color:#D43324">      return</span><span style="color:#0468D7"> IntegerSingle</span><span style="color:#222222">(list[</span><span style="color:#11796D">0</span><span style="color:#222222">]);</span></span>
+<span class="line"><span style="color:#D43324">    case</span><span style="color:#11796D"> 2</span><span style="color:#222222">:</span></span>
+<span class="line"><span style="color:#D43324">      return</span><span style="color:#0468D7"> IntegerDouble</span><span style="color:#222222">(list[</span><span style="color:#11796D">0</span><span style="color:#222222">], list[</span><span style="color:#11796D">1</span><span style="color:#222222">]);</span></span>
+<span class="line"><span style="color:#D43324">    case</span><span style="color:#11796D"> 3</span><span style="color:#222222">:</span></span>
+<span class="line"><span style="color:#D43324">      return</span><span style="color:#0468D7"> IntegerTriple</span><span style="color:#222222">(list[</span><span style="color:#11796D">0</span><span style="color:#222222">], list[</span><span style="color:#11796D">1</span><span style="color:#222222">], list[</span><span style="color:#11796D">2</span><span style="color:#222222">]);</span></span>
+<span class="line"><span style="color:#D43324">    default</span><span style="color:#222222">:</span></span>
+<span class="line"><span style="color:#D43324">      throw</span><span style="color:#0468D7"> ArgumentError</span><span style="color:#222222">(</span><span style="color:#11796D">"List must between 1 and 3 items. This list was </span><span style="color:#11796D">${</span><span style="color:#222222">list</span><span style="color:#11796D">.</span><span style="color:#222222">length</span><span style="color:#11796D">}</span><span style="color:#11796D"> items."</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">  }</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="redirecting-constructors">Redirecting constructors</h2><a class="heading-link" href="#redirecting-constructors" aria-label="Link to 'Redirecting constructors' section">#</a></div><p>Sometimes a constructor's only purpose is to redirect to another constructor in the same class. A redirecting constructor's body is empty, with the constructor call appearing after a colon (<code>:</code>).</p> <?code-excerpt "misc/lib/cheatsheet/redirecting_constructors.dart (redirecting-constructors)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> Automobile</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#0468D7">  String</span><span style="color:#222222"> make;</span></span>
+<span class="line"><span style="color:#0468D7">  String</span><span style="color:#222222"> model;</span></span>
+<span class="line"><span style="color:#0468D7">  int</span><span style="color:#222222"> mpg;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">  // The main constructor for this class.</span></span>
+<span class="line"><span style="color:#0468D7">  Automobile</span><span style="color:#222222">(</span><span style="color:#D43324">this</span><span style="color:#222222">.make, </span><span style="color:#D43324">this</span><span style="color:#222222">.model, </span><span style="color:#D43324">this</span><span style="color:#222222">.mpg);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">  // Delegates to the main constructor.</span></span>
+<span class="line"><span style="color:#0468D7">  Automobile</span><span style="color:#222222">.</span><span style="color:#6200EE">hybrid</span><span style="color:#222222">(</span><span style="color:#0468D7">String</span><span style="color:#222222"> make, </span><span style="color:#0468D7">String</span><span style="color:#222222"> model) : </span><span style="color:#D43324">this</span><span style="color:#222222">(make, model, </span><span style="color:#11796D">60</span><span style="color:#222222">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6E6E70">  // Delegates to a named constructor</span></span>
+<span class="line"><span style="color:#0468D7">  Automobile</span><span style="color:#222222">.</span><span style="color:#6200EE">fancyHybrid</span><span style="color:#222222">() : </span><span style="color:#D43324">this</span><span style="color:#222222">.</span><span style="color:#6200EE">hybrid</span><span style="color:#222222">(</span><span style="color:#11796D">'Futurecar'</span><span style="color:#222222">, </span><span style="color:#11796D">'Mark 2'</span><span style="color:#222222">);</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-15">Code example</h3><a class="heading-link" href="#code-example-15" aria-label="Link to 'Code example' section">#</a></div><p>Remember the <code>Color</code> class from above? Create a named constructor called <code>black</code>, but rather than manually assigning the properties, redirect it to the default constructor with zeros as the arguments.</p><p>Ignore all initial errors in the DartPad.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class Color {
+  int red;
+  int green;
+  int blue;
+  
+  Color(this.red, this.green, this.blue);
+
+  // TODO: Create a named constructor called &quot;black&quot; here
+  // and redirect it to call the existing constructor
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  final errs = &lt;String&gt;[];
+
+  try {
+    final result = Color.black();
+    
+    if (result.red != 0) {
+      errs.add('Called Color.black() and got a Color with red equal to \n ${result.red} instead of the expected value (0).');
+    }
+
+    if (result.green != 0) {
+      errs.add('Called Color.black() and got a Color with green equal to \n ${result.green} instead of the expected value (0).');
+    }
+
+    if (result.blue != 0) {
+  errs.add('Called Color.black() and got a Color with blue equal to \n ${result.blue} instead of the expected value (0).');
+    }
+  } catch (e) {
+    print('Called Color.black() and got an exception of type ${e.runtimeType}.');
+    return;
+  }
+
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for redirecting constructors example</summary><p>Your constructor should redirect to <code>this(0, 0, 0)</code>.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#0468D7">  Color</span><span style="color:#222222">.</span><span style="color:#6200EE">black</span><span style="color:#222222">() : </span><span style="color:#D43324">this</span><span style="color:#222222">(</span><span style="color:#11796D">0</span><span style="color:#222222">, </span><span style="color:#11796D">0</span><span style="color:#222222">, </span><span style="color:#11796D">0</span><span style="color:#222222">);</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="const-constructors">Const constructors</h2><a class="heading-link" href="#const-constructors" aria-label="Link to 'Const constructors' section">#</a></div><p>If your class produces objects that never change, you can make these objects compile-time constants. To do this, define a <code>const</code> constructor and make sure that all instance variables are final.</p> <?code-excerpt "misc/lib/cheatsheet/redirecting_constructors.dart (const-constructors)"?> <div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> ImmutablePoint</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#D43324">  static</span><span style="color:#D43324"> const</span><span style="color:#0468D7"> ImmutablePoint</span><span style="color:#222222"> origin = </span><span style="color:#0468D7">ImmutablePoint</span><span style="color:#222222">(</span><span style="color:#11796D">0</span><span style="color:#222222">, </span><span style="color:#11796D">0</span><span style="color:#222222">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">  final</span><span style="color:#0468D7"> int</span><span style="color:#222222"> x;</span></span>
+<span class="line"><span style="color:#D43324">  final</span><span style="color:#0468D7"> int</span><span style="color:#222222"> y;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">  const</span><span style="color:#0468D7"> ImmutablePoint</span><span style="color:#222222">(</span><span style="color:#D43324">this</span><span style="color:#222222">.x, </span><span style="color:#D43324">this</span><span style="color:#222222">.y);</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div><div class="header-wrapper"><h3 class="no_toc" id="code-example-16">Code example</h3><a class="heading-link" href="#code-example-16" aria-label="Link to 'Code example' section">#</a></div><p>Modify the <code>Recipe</code> class so its instances can be constants, and create a constant constructor that does the following:</p><ul><li>Has three parameters: <code>ingredients</code>, <code>calories</code>, and <code>milligramsOfSodium</code> (in that order).</li><li>Uses <code>this.</code> syntax to automatically assign the parameter values to the object properties of the same name.</li><li>Is constant, with the <code>const</code> keyword just before <code>Recipe</code> in the constructor declaration.</li></ul><p>Ignore all initial errors in the DartPad.</p><pre><code data-dartpad="true" data-embed="true" data-theme="light" title="Runnable Dart sample" data-run="false">class Recipe {
+  List&lt;String&gt; ingredients;
+  int calories;
+  double milligramsOfSodium;
+
+  // TODO: Create a const constructor here&quot;
+
+}
+
+
+// Tests your solution (Don't edit!):
+void main() {
+  final errs = &lt;String&gt;[];
+
+  try {
+    const obj = Recipe(['1 egg', 'Pat of butter', 'Pinch salt'], 120, 200);
+    
+    if (obj.ingredients.length != 3) {
+      errs.add('Called Recipe([\'1 egg\', \'Pat of butter\', \'Pinch salt\'], 120, 200) \n and got an object with ingredient list of length ${obj.ingredients.length} rather than the expected length (3).');
+    }
+    
+    if (obj.calories != 120) {
+      errs.add('Called Recipe([\'1 egg\', \'Pat of butter\', \'Pinch salt\'], 120, 200) \n and got an object with a calorie value of ${obj.calories} rather than the expected value (120).');
+    }
+    
+    if (obj.milligramsOfSodium != 200) {
+      errs.add('Called Recipe([\'1 egg\', \'Pat of butter\', \'Pinch salt\'], 120, 200) \n and got an object with a milligramsOfSodium value of ${obj.milligramsOfSodium} rather than the expected value (200).');
+    }
+  } catch (e) {
+    print('Tried calling Recipe([\'1 egg\', \'Pat of butter\', \'Pinch salt\'], 120, 200) \n and received a null.');
+  }
+
+  if (errs.isEmpty) {
+    print('Success!');
+  } else {
+    errs.forEach(print);
+  }
+}
+</code></pre><details><summary>Solution for const constructors example</summary><p>To make the constructor const, you'll need to make all the properties final.</p><div class="code-block-wrapper language-dart"><div class="code-block-body"><span class="code-block-language" title="Language dart">dart</span><pre class="shiki dash-light" tabindex="0"><code><span class="line"><span style="color:#D43324">class</span><span style="color:#0468D7"> Recipe</span><span style="color:#222222"> {</span></span>
+<span class="line"><span style="color:#D43324">  final</span><span style="color:#0468D7"> List</span><span style="color:#222222">&#x3C;</span><span style="color:#0468D7">String</span><span style="color:#222222">> ingredients;</span></span>
+<span class="line"><span style="color:#D43324">  final</span><span style="color:#0468D7"> int</span><span style="color:#222222"> calories;</span></span>
+<span class="line"><span style="color:#D43324">  final</span><span style="color:#0468D7"> double</span><span style="color:#222222"> milligramsOfSodium;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D43324">  const</span><span style="color:#0468D7"> Recipe</span><span style="color:#222222">(</span><span style="color:#D43324">this</span><span style="color:#222222">.ingredients, </span><span style="color:#D43324">this</span><span style="color:#222222">.calories, </span><span style="color:#D43324">this</span><span style="color:#222222">.milligramsOfSodium);</span></span>
+<span class="line"><span style="color:#222222">}</span></span></code></pre></div></div></details><div class="header-wrapper"><h2 id="whats-next">What's next?</h2><a class="heading-link" href="#whats-next" aria-label="Link to 'What's next?' section">#</a></div><p>We hope you enjoyed using this tutorial to learn or test your knowledge of some of the most interesting features of the Dart language.</p><p>What you can try next includes:</p><ul><li>Try <a href="../tutorials.html">other Dart tutorials</a>.</li><li>Read the <a href="../language.html">Dart language tour</a>.</li><li>Play with <a href="https://dartpad.dev/">DartPad.</a></li><li><a href="../get-dart.html">Get the Dart SDK</a>.</li></ul><p id="page-github-links"><span>Unless stated otherwise, the documentation on this site reflects Dart 3.6.0. Page last updated on 2024-08-04.</span> <a href="https://github.com/dart-lang/site-www/tree/main/src/content/resources/dart-cheatsheet.md" target="_blank" rel="noopener">View source</a> <span>or </span><a href="https://github.com/dart-lang/site-www/issues/new?template=1_page_issue.yml&amp;page-url=https://dart.dev/resources/dart-cheatsheet/&amp;page-source=https://github.com/dart-lang/site-www/tree/main/src/content/resources/dart-cheatsheet.md" title="Report an issue with this page" target="_blank" rel="noopener">report an issue</a>.</p></div></article></main><footer id="page-footer"><div class="footer-section footer-main"><a href="../index.html" class="brand" title="Dart"><img src="../assets/img/logo/logo-white-text.svg" alt="Dart" width="164"></a><div class="footer-social-links"><a href="https://medium.com/dartlang" target="_blank" rel="noopener" title="Medium blog"><svg><use href="../assets/img/social/medium.svg#medium"></use></svg> </a><a href="https://github.com/dart-lang" target="_blank" rel="noopener" title="GitHub"><svg><use href="../assets/img/social/github.svg#github"></use></svg> </a><a href="https://twitter.com/dart_lang" target="_blank" rel="noopener" title="X (Twitter)"><svg><use href="../assets/img/social/x.svg#x"></use></svg></a></div></div><div class="footer-section footer-tray"><div class="footer-licenses">Except as otherwise noted, this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, and code samples are licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">3-Clause BSD License</a>.</div><div class="footer-utility-links"><ul><li><a href="../terms.html" title="Terms of use">Terms</a></li><li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener" title="Privacy policy">Privacy</a></li><li><a href="../security.html" title="Security philosophy and practices">Security</a></li></ul></div></div></footer></body>
+<!-- Mirrored from dart.dev/resources/dart-cheatsheet by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Dec 2024 22:17:08 GMT -->
+</html>

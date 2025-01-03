@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from dart.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Dec 2024 22:13:04 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=utf-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script>
+      !(function (e, t, a, n) {
+        (e[n] = e[n] || []),
+          e[n].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var g = t.getElementsByTagName(a)[0],
+          m = t.createElement(a);
+        (m.async = !0),
+          (m.src = "../www.googletagmanager.com/gtm4a44.js?id=GTM-5VSZM5J"),
+          g.parentNode.insertBefore(m, g);
+      })(window, document, "script", "dataLayer");
+    </script>
+    <meta
+      name="description"
+      content="Dart is an approachable, portable, and productive language for high-quality apps on any platform."
+    />
+    <title>Lenguaje de programación Dart | Dart</title>
+    <link
+      rel="icon"
+      sizes="64x64"
+      href="assets/img/logo/dart-64.png"
+      eleventy:ignore
+    />
+    <link
+      href="assets/img/touch-icon-iphone.png"
+      rel="apple-touch-icon"
+      eleventy:ignore
+    />
+    <link
+      href="assets/img/touch-icon-ipad.png"
+      rel="apple-touch-icon"
+      sizes="152x152"
+      eleventy:ignore
+    />
+    <link
+      href="assets/img/touch-icon-iphone-retina.png"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      eleventy:ignore
+    />
+    <link
+      href="assets/img/touch-icon-ipad-retina.png"
+      rel="apple-touch-icon"
+      sizes="167x167"
+      eleventy:ignore
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@dart_lang" />
+    <meta name="twitter:title" content="Dart programming language" />
+    <meta
+      name="twitter:description"
+      content="Dart is an approachable, portable, and productive language for high-quality apps on any platform."
+    />
+    <meta property="og:title" content="Dart programming language" />
+    <meta
+      property="og:description"
+      content="Dart is an approachable, portable, and productive language for high-quality apps on any platform."
+    />
+    <meta property="og:url" content="/" />
+    <meta
+      property="og:image"
+      content="/assets/img/logo/dart-logo-for-shares.png?2"
+      eleventy:ignore
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Display:wght@400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Mono:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script
+      src="../cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="../cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="../cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js"
+      integrity="sha512-nlp9/l96/EpjYBx7EP7pGASVXNe80hGhYAUrjeXnu/fyF5Py0/RXav4BBNs7n5Hx1WFhOEOWSAVjGeC3oKxDVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assets/js/os-tabs.js"></script>
+    <script src="assets/js/utilities.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      !(function (e, a, t, n, c, o, s) {
+        (e.GoogleAnalyticsObject = c),
+          (e[c] =
+            e[c] ||
+            function () {
+              (e[c].q = e[c].q || []).push(arguments);
+            }),
+          (e[c].l = 1 * new Date()),
+          (o = a.createElement(t)),
+          (s = a.getElementsByTagName(t)[0]),
+          (o.async = 1),
+          (o.src = "../www.google-analytics.com/analytics.js"),
+          s.parentNode.insertBefore(o, s);
+      })(window, document, "script", 0, "ga"),
+        ga("create", "UA-26406144-4", "auto"),
+        ga("send", "pageview");
+    </script>
+  </head>
+  <body class="homepage">
+    <section id="cookie-notice">
+      <div class="container">
+        <p>
+          esdart.dev utiliza cookies de Google para entregar y garantizar la calidad de sus 
+          servicios y para analizar el tráfico. 
+          <a
+            href="https://policies.google.com/technologies/cookies"
+            target="_blank"
+            rel="noopener"
+            >Aprende más</a
+          >.
+        </p>
+        <button id="cookie-consent" class="btn btn-primary">OK, aceptar</button>
+      </div>
+    </section>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5VSZM5J"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <header id="page-header" class="site-header">
+      <nav id="mainnav" class="site-header">
+        <div id="menu-toggle"><i class="material-symbols">menu</i></div>
+        <a href="index.html" class="brand" title="Dart"
+          ><img src="assets/img/logo/logo-white-text.svg" alt="Dart"
+        /></a>
+        <ul class="navbar">
+          <li><a href="overview.html" class="nav-link">Descripción General</a></li>
+          <li class="mainnav__get-started">
+            <a href="guides.html" class="nav-link"><span>Documentación</span></a>
+          </li>
+          <li><a href="community.html" class="nav-link">Comunidad</a></li>
+          <li><a href="index.html#try-dart" class="nav-link">Prueba Dart</a></li>
+          <li><a href="get-dart.html" class="nav-link">Consigue Dart</a></li>
+          <li class="searchfield">
+            <form
+              action="https://dart.dev/search"
+              class="site-header__search form-inline"
+              id="cse-search-box"
+            >
+              <input
+                type="hidden"
+                name="cx"
+                value="011220921317074318178:_yy-tmb5t_i"
+              />
+              <input type="hidden" name="ie" value="UTF-8" />
+              <input type="hidden" name="hl" value="en" />
+              <input
+                class="site-header__searchfield form-control search-field"
+                type="search"
+                name="q"
+                id="search-main"
+                autocomplete="off"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="banner">
+      <p class="banner__text">
+        ¡Ya está aquí Dart 3.6! Lee la
+        <a
+          href="https://medium.com/dartlang/announcing-dart-3-6-778dd7a80983"
+          target="_blank"
+          >publicación del blog</a
+        >
+        para conocer las nuevas características del pub y del lenguaje
+      </p>
+    </div>
+    <div id="sidenav">
+      <form
+        action="https://dart.dev/search/"
+        class="site-header__search form-inline"
+      >
+        <input
+          class="site-header__searchfield form-control search-field"
+          type="search"
+          name="q"
+          id="search-side"
+          autocomplete="off"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </form>
+      <div class="site-sidebar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="overview.html" class="nav-link">Descripción General</a>
+          </li>
+          <li class="nav-item">
+            <a href="community.html" class="nav-link">Comunidad</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://dartpad.dev/" class="nav-link">Prueba Dart</a>
+          </li>
+          <li class="nav-item">
+            <a href="get-dart.html" class="nav-link">Consigue Dart</a>
+          </li>
+          <li class="nav-item">
+            <a href="guides.html" class="nav-link">Documentacióna>
+          </li>
+          <li aria-hidden="true">
+            <div class="sidebar-primary-divider"></div>
+          </li>
+        </ul>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed collapsible"
+              data-toggle="collapse"
+              href="#sidenav-1"
+              role="button"
+              aria-expanded="false"
+              aria-controls="sidenav-1"
+              >Lenguaje</a
+            >
+            <ul class="nav flex-column flex-nowrap collapse" id="sidenav-1">
+              <li class="nav-item">
+                <a class="nav-link" href="language.html">Introducción</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-1-2"
+                  href="#sidenav-1-2"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-1-2"
+                  >Syntax basics</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-1-2"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/variables.html"
+                      >Variables</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/operators.html"
+                      >Operators</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/comments.html"
+                      >Comments</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/metadata.html"
+                      >Metadata</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/libraries.html"
+                      >Libraries & imports</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/keywords.html"
+                      >Keywords</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-1-3"
+                  href="#sidenav-1-3"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-1-3"
+                  >Types</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-1-3"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/built-in-types.html"
+                      >Built-in types</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/records.html">Records</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/collections.html"
+                      >Collections</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/generics.html"
+                      >Generics</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/typedefs.html"
+                      >Typedefs</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/type-system.html"
+                      >Type system</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-1-4"
+                  href="#sidenav-1-4"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-1-4"
+                  >Patterns</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-1-4"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/patterns.html"
+                      >Overview & usage</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/pattern-types.html"
+                      >Pattern types</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="https://codelabs.developers.google.com/codelabs/dart-patterns-records"
+                      target="_blank"
+                      rel="noopener"
+                      >Applied tutorial</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="language/functions.html">Functions</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-1-6"
+                  href="#sidenav-1-6"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-1-6"
+                  >Control flow</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-1-6"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/loops.html">Loops</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/branches.html"
+                      >Branches</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/error-handling.html"
+                      >Error handling</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-1-7"
+                  href="#sidenav-1-7"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-1-7"
+                  >Classes & objects</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-1-7"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/classes.html">Classes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/constructors.html"
+                      >Constructors</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/methods.html">Methods</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/extend.html"
+                      >Extend a class</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/mixins.html">Mixins</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/enums.html">Enums</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/extension-methods.html"
+                      >Extension methods</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/extension-types.html"
+                      >Extension types</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/callable-objects.html"
+                      >Callable objects</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-1-8"
+                  href="#sidenav-1-8"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-1-8"
+                  >Class modifiers</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-1-8"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/class-modifiers.html"
+                      >Overview & usage</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="language/class-modifiers-for-apis.html"
+                      >Class modifiers for API maintainers</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/modifier-reference.html"
+                      >Reference</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-1-9"
+                  href="#sidenav-1-9"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-1-9"
+                  >Concurrency</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-1-9"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/concurrency.html"
+                      >Overview</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/async.html"
+                      >Asynchronous support</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="language/isolates.html"
+                      >Isolates</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-1-10"
+                  href="#sidenav-1-10"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-1-10"
+                  >Null safety</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-1-10"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="null-safety.html"
+                      >Sound null safety</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="null-safety/migration-guide.html"
+                      >Migrating to null safety</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="null-safety/understanding-null-safety.html"
+                      >Understanding null safety</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="null-safety/unsound-null-safety.html"
+                      >Unsound null safety</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="null-safety/faq.html">FAQ</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed collapsible"
+              data-toggle="collapse"
+              href="#sidenav-2"
+              role="button"
+              aria-expanded="false"
+              aria-controls="sidenav-2"
+              >Core libraries</a
+            >
+            <ul class="nav flex-column flex-nowrap collapse" id="sidenav-2">
+              <li class="nav-item">
+                <a class="nav-link" href="libraries.html">Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="libraries/dart-core.html"
+                  >dart:core</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="libraries/dart-async.html"
+                  >dart:async</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="libraries/dart-math.html"
+                  >dart:math</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="libraries/dart-convert.html"
+                  >dart:convert</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="libraries/dart-io.html">dart:io</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="libraries/dart-html.html"
+                  >dart:html</a
+                >
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="nav-item">
+                <a class="nav-link" href="libraries/collections/iterables.html"
+                  >Iterable collections</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-2-10"
+                  href="#sidenav-2-10"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-2-10"
+                  >Asynchronous programming</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-2-10"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="libraries/async/async-await.html"
+                      >Tutorial</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="libraries/async/futures-error-handling.html"
+                      >Futures and error handling</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="libraries/async/using-streams.html"
+                      >Using streams</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="libraries/async/creating-streams.html"
+                      >Creating streams</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed collapsible"
+              data-toggle="collapse"
+              href="#sidenav-3"
+              role="button"
+              aria-expanded="false"
+              aria-controls="sidenav-3"
+              >Effective Dart</a
+            >
+            <ul class="nav flex-column flex-nowrap collapse" id="sidenav-3">
+              <li class="nav-item">
+                <a class="nav-link" href="effective-dart.html">Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="effective-dart/style.html">Style</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="effective-dart/documentation.html"
+                  >Documentation</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="effective-dart/usage.html">Usage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="effective-dart/design.html">Design</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed collapsible"
+              data-toggle="collapse"
+              href="#sidenav-4"
+              role="button"
+              aria-expanded="false"
+              aria-controls="sidenav-4"
+              >Packages</a
+            >
+            <ul class="nav flex-column flex-nowrap collapse" id="sidenav-4">
+              <li class="nav-item">
+                <a class="nav-link" href="tools/pub/packages.html"
+                  >How to use packages</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/useful-packages.html"
+                  >Commonly used packages</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tools/pub/create-packages.html"
+                  >Creating packages</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tools/pub/publishing.html"
+                  >Publishing packages</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tools/pub/writing-package-pages.html"
+                  >Writing package pages</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tools/pub/workspaces.html"
+                  >Workspaces (monorepo support)</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-4-7"
+                  href="#sidenav-4-7"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-4-7"
+                  >Package reference</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-4-7"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/pub/dependencies.html"
+                      >Dependencies</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/pub/glossary.html"
+                      >Glossary</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/pub/package-layout.html"
+                      >Package layout conventions</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="tools/pub/environment-variables.html"
+                      >Pub environment variables</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/pub/pubspec.html"
+                      >Pubspec file</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/pub/troubleshoot.html"
+                      >Troubleshooting pub</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="tools/pub/verified-publishers.html"
+                      >Verified publishers</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="tools/pub/security-advisories.html"
+                      >Security advisories</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/pub/versioning.html"
+                      >Versioning</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="tools/pub/custom-package-repositories.html"
+                      >Custom package repositories</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tools/pub/private-files.html"
+                  >What not to commit</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed collapsible"
+              data-toggle="collapse"
+              href="#sidenav-5"
+              role="button"
+              aria-expanded="false"
+              aria-controls="sidenav-5"
+              >Development</a
+            >
+            <ul class="nav flex-column flex-nowrap collapse" id="sidenav-5">
+              <li class="nav-item">
+                <a class="nav-link" href="guides/json.html">JSON</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="resources/language/number-representation.html"
+                  >Number representation</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/google-apis.html"
+                  >Google APIs</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="multiplatform-apps.html"
+                  >Multi-platform apps</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-5-5"
+                  href="#sidenav-5-5"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-5-5"
+                  >Command-line & server apps</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-5-5"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="server.html">Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tutorials/server/get-started.html"
+                      >Get started</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tutorials/server/cmdline.html"
+                      >Write command-line apps</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tutorials/server/fetch-data.html"
+                      >Fetch data from the internet</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tutorials/server/httpserver.html"
+                      >Write HTTP servers</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="server/libraries.html"
+                      >Libraries & packages</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="server/google-cloud.html"
+                      >Google Cloud</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-5-6"
+                  href="#sidenav-5-6"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-5-6"
+                  >Web apps</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-5-6"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="web.html">Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="web/get-started.html"
+                      >Get started</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="web/deployment.html"
+                      >Deployment</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="web/libraries.html"
+                      >Libraries & packages</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="web/wasm.html"
+                      >Wasm compilation</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="guides/environment-declarations.html"
+                  >Environment declarations</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed collapsible"
+              data-toggle="collapse"
+              href="#sidenav-6"
+              role="button"
+              aria-expanded="false"
+              aria-controls="sidenav-6"
+              >Interoperability</a
+            >
+            <ul class="nav flex-column flex-nowrap collapse" id="sidenav-6">
+              <li class="nav-item">
+                <a class="nav-link" href="interop/c-interop.html">C interop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="interop/objective-c-interop.html"
+                  >Objective-C & Swift interop</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="interop/java-interop.html"
+                  >Java & Kotlin interop</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-6-4"
+                  href="#sidenav-6-4"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-6-4"
+                  >JavaScript interop</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-6-4"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="interop/js-interop.html"
+                      >Overview</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="interop/js-interop/usage.html"
+                      >Usage</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="interop/js-interop/js-types.html"
+                      >JS types</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="interop/js-interop/tutorials.html"
+                      >Tutorials</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="interop/js-interop/past-js-interop.html"
+                      >Past JS interop</a
+                    >
+                  </li>
+                  <div class="dropdown-divider"></div>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="interop/js-interop/package-web.html"
+                      >Web interop</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed collapsible"
+              data-toggle="collapse"
+              href="#sidenav-7"
+              role="button"
+              aria-expanded="false"
+              aria-controls="sidenav-7"
+              >Tools & techniques</a
+            >
+            <ul class="nav flex-column flex-nowrap collapse" id="sidenav-7">
+              <li class="nav-item">
+                <a class="nav-link" href="tools.html">Overview</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-7-2"
+                  href="#sidenav-7-2"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-7-2"
+                  >Editors & debuggers</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-7-2"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/jetbrains-plugin.html"
+                      >IntelliJ & Android Studio</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/vs-code.html">VS Code</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/dart-devtools.html"
+                      >Dart DevTools</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link collapsible collapsed"
+                      data-toggle="collapse"
+                      data-target="#sidenav-7-2-4"
+                      href="#sidenav-7-2-4"
+                      role="button"
+                      aria-expanded="false"
+                      aria-controls="sidenav-7-2-4"
+                      >DartPad</a
+                    >
+                    <ul
+                      class="nav flex-column flex-nowrap collapse"
+                      id="sidenav-7-2-4"
+                    >
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dartpad.html"
+                          >Overview</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          href="tools/dartpad/troubleshoot.html"
+                          >Troubleshooting DartPad</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-7-3"
+                  href="#sidenav-7-3"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-7-3"
+                  >Command-line tools</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-7-3"
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link collapsible"
+                      data-toggle="collapse"
+                      data-target="#sidenav-7-3-1"
+                      href="#sidenav-7-3-1"
+                      role="button"
+                      aria-expanded="true"
+                      aria-controls="sidenav-7-3-1"
+                      >Dart SDK</a
+                    >
+                    <ul
+                      class="nav flex-column flex-nowrap collapse show"
+                      id="sidenav-7-3-1"
+                    >
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/sdk.html">Overview</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-tool.html">dart</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-analyze.html"
+                          >dart analyze</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-compile.html"
+                          >dart compile</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-create.html"
+                          >dart create</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-doc.html"
+                          >dart doc</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-fix.html"
+                          >dart fix</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-format.html"
+                          >dart format</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-info.html"
+                          >dart info</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/pub/cmd.html"
+                          >dart pub</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-run.html"
+                          >dart run</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dart-test.html"
+                          >dart test</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/dartaotruntime.html"
+                          >dartaotruntime</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/experiment-flags.html"
+                          >Experiment flags</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link collapsible"
+                      data-toggle="collapse"
+                      data-target="#sidenav-7-3-2"
+                      href="#sidenav-7-3-2"
+                      role="button"
+                      aria-expanded="true"
+                      aria-controls="sidenav-7-3-2"
+                      >Other command-line tools</a
+                    >
+                    <ul
+                      class="nav flex-column flex-nowrap collapse show"
+                      id="sidenav-7-3-2"
+                    >
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/build_runner.html"
+                          >build_runner</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="tools/webdev.html">webdev</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-7-4"
+                  href="#sidenav-7-4"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-7-4"
+                  >Static analysis</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-7-4"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/analysis.html"
+                      >Customizing static analysis</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="deprecated/sound-problems.html"
+                      >Fixing common type problems</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/non-promotion-reasons.html"
+                      >Fixing type promotion failures</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/linter-rules.html"
+                      >Linter rules</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="tools/diagnostic-messages.html"
+                      >Diagnostic messages</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-7-5"
+                  href="#sidenav-7-5"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-7-5"
+                  >Testing & optimization</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-7-5"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="guides/testing.html">Testing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="web/debugging.html"
+                      >Debugging web apps</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li aria-hidden="true">
+            <div class="sidebar-primary-divider"></div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link collapsed collapsible"
+              data-toggle="collapse"
+              href="#sidenav-9"
+              role="button"
+              aria-expanded="false"
+              aria-controls="sidenav-9"
+              >Resources</a
+            >
+            <ul class="nav flex-column flex-nowrap collapse" id="sidenav-9">
+              <li class="nav-item">
+                <a class="nav-link" href="resources/dart-cheatsheet.html"
+                  >Language cheatsheet</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/breaking-changes.html"
+                  >Breaking changes</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/language/evolution.html"
+                  >Language evolution</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/language/spec.html"
+                  >Language specification</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/dart-3-migration.html"
+                  >Dart 3 migration guide</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsible collapsed"
+                  data-toggle="collapse"
+                  data-target="#sidenav-9-6"
+                  href="#sidenav-9-6"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="sidenav-9-6"
+                  >Coming from ...</a
+                >
+                <ul
+                  class="nav flex-column flex-nowrap collapse"
+                  id="sidenav-9-6"
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="resources/coming-from/js-to-dart.html"
+                      >JavaScript to Dart</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="resources/coming-from/swift-to-dart.html"
+                      >Swift to Dart</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/faq.html">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/glossary.html">Glossary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/books.html">Books</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="resources/videos.html">Videos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tutorials.html">Tutorials</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link collapsible"
+              data-toggle="collapse"
+              href="#sidenav-10"
+              role="button"
+              aria-expanded="true"
+              aria-controls="sidenav-10"
+              >Related sites</a
+            >
+            <ul
+              class="nav flex-column flex-nowrap collapse show"
+              id="sidenav-10"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://api.dart.dev/"
+                  target="_blank"
+                  rel="noopener"
+                  >API reference</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://medium.com/dartlang"
+                  target="_blank"
+                  rel="noopener"
+                  >Blog</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://dartpad.dev/"
+                  target="_blank"
+                  rel="noopener"
+                  >DartPad (online editor)</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://flutter.dev/"
+                  target="_blank"
+                  rel="noopener"
+                  >Flutter</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="https://pub.dev/"
+                  target="_blank"
+                  rel="noopener"
+                  >Package site</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main id="page-content">
+      <div class="d-none d-sm-none d-md-block">
+        <section class="dash-header">
+          <video autoplay loop muted playsinline>
+            <source
+              src="assets/dash/video/hotreload.webm"
+              type='video/webm;codecs="vp8, vorbis"'
+            />
+            <source
+              src="assets/dash/video/hotreload.mp4"
+              type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+            />
+            <img src="assets/dash/2x/paint-your-ui.png" alt="Paint your UI" />
+          </video>
+        </section>
+      </div>
+      <section class="dash-header d-sm-block d-md-none">
+        <img
+          src="assets/dash/2x/paint-your-ui.png"
+          alt="Paint your UI to life"
+        />
+      </section>
+      <section class="dash-header-callout">
+        <div class="callout-title">
+          Un lenguaje accesible, portátil y productivo para aplicaciones de alta 
+          calidad en cualquier plataforma        
+        </div>
+        <div class="callout-button">
+          <button
+            class="btn btn-link btn-icon"
+            type="button"
+            data-toggle="modal"
+            data-target="#videoModal"
+            data-video="5F-6n_2XWR8"
+          >
+            <i class="material-symbols">play_circle</i> Ver vídeo
+          </button>
+        </div>
+        <img
+          class="made-by"
+          src="assets/dash/2x/supported-by-google.png"
+          alt="Supported by Google"
+        />
+        <div class="callout-oss">
+          <p>
+            Dart es gratuito y de código abierto &nbsp;<a
+              href="https://github.com/dart-lang/"
+              title="Dart project GitHub organization"
+            >
+              <svg><use href="assets/img/social/github.svg#github"></use></svg
+            ></a>
+          </p>
+        </div>
+      </section>
+      <section class="dash-dart-features">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+              <div class="feature">
+                <div class="feature-icon">
+                  <img
+                    src="assets/dash/2x/multiplatform-performance-light-op1.png"
+                    alt="Multiplatform performance"
+                  />
+                </div>
+                <div class="feature-title">Accesible<br /></div>
+                <div class="feature-desc">
+                  Desarrolle con un lenguaje de programación consistente, 
+                  conciso y fuertemente tipado que ofrezca características 
+                  modernas como seguridad nula y coincidencia de patrones.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="feature">
+                <div class="feature-icon">
+                  <img
+                    src="assets/dash/2x/client-optimized-light-op1.png"
+                    alt="Client optimised"
+                  />
+                </div>
+                <div class="feature-title">Desarrollo<br />productivo</div>
+                <div class="feature-desc">
+                  Realice cambios de forma iterativa: use la recarga activa 
+                  para ver el resultado instantáneamente en su aplicación en ejecución.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="feature">
+                <div class="feature-icon">
+                  <img
+                    src="assets/dash/2x/productive-dev-light-op1.png"
+                    alt="Productive development"
+                  />
+                </div>
+                <div class="feature-title">
+                  Portátil y rápido<br />en todas las plataformas
+                </div>
+                <div class="feature-desc">
+                  Compílelo en código de máquina ARM, x64 y RISC-V para dispositivos móviles, 
+                  computadoras de escritorio y backend. O bien, compílelo en JavaScript y 
+                  WebAssembly para la web.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="dart-dash-details container-fluid d-sm-block d-md-none"
+        tabindex="-1"
+      >
+        <section class="row dash-row">
+          <div class="col-lg-7 col-md-6 col-sm-12 content-image">
+            <img
+              class="gallerySix"
+              src="assets/dash/svg/1-1-async-await.svg"
+              alt="Async await functions"
+            />
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-12 content-info">
+            <div class="content-container">
+              <div class="content-icon">
+                <img
+                  src="assets/dash/2x/multiplatform-performance-light-op1.png"
+                  alt="Multiplatform performance"
+                />
+              </div>
+              <div class="content-feature">Accesible</div>
+              <div class="content-desc" id="gallerySix">
+                <ul class="selector">
+                  <li
+                    class="highlight"
+                    data-banner="assets/dash/svg/1-1-async-await.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        <a href="libraries/async/async-await.html"
+                          >Async-await</a
+                        >
+                        maduro y completo para interfaces de usuario que
+                        contienen código controlado por eventos, combinado con
+                        <a href="language/concurrency.html"
+                          >concurrencia basada en aislamiento.</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                  <li data-banner="assets/dash/svg/1-2-language-optimized.svg">
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Escriba código seguro y conciso utilizando funciones como
+                        <a href="null-safety.html">seguridad nula</a>,
+                        <a
+                          href="language/collections.html#control-flow-operators"
+                          >recopilación de valores if</a
+                        >, y
+                        <a href="language/patterns.html">coincidencia de patrones</a>.
+                      </div>
+                    </div>
+                  </li>
+                  <li data-banner="assets/dash/svg/1-3-familiar-syntax.svg">
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        A consistent programming language, with an easy to learn
+                        and <a href="language.html">familiar syntax</a>.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </section>
+        <section class="row dash-row">
+          <div class="col-lg-7 col-md-6 col-sm-12 content-image">
+            <img
+              class="galleryFive"
+              src="assets/dash/svg/2-1-hot-reload-iterative-changes.svg"
+              alt="Hot reload changes"
+            />
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-12 content-info">
+            <div class="content-container">
+              <div class="content-icon">
+                <img
+                  src="assets/dash/2x/client-optimized-light-op1.png"
+                  alt="Productive development"
+                />
+              </div>
+              <div class="content-feature">Productive Development</div>
+              <div class="content-desc" id="galleryFive">
+                <ul class="selector">
+                  <li
+                    class="highlight"
+                    data-banner="assets/dash/svg/2-1-hot-reload-iterative-changes.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Make changes to your source code iteratively, using
+                        <a href="https://docs.flutter.dev/tools/hot-reload"
+                          >hot reload</a
+                        >
+                        to instantly see the effect in the running app.
+                      </div>
+                    </div>
+                  </li>
+                  <li data-banner="assets/dash/svg/2-2-flexible-type.svg">
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Write code using a flexible type system with rich static
+                        analysis and powerful,
+                        <a href="tools/analysis.html">configurable tooling</a>.
+                      </div>
+                    </div>
+                  </li>
+                  <li data-banner="assets/dash/svg/2-3-runtime-insight.svg">
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Do
+                        <a
+                          href="https://docs.flutter.dev/tools/devtools/performance"
+                          >profiling</a
+                        >,
+                        <a
+                          href="https://docs.flutter.dev/tools/devtools/logging"
+                          >logging</a
+                        >, and
+                        <a
+                          href="https://docs.flutter.dev/tools/devtools/debugger"
+                          >debugging</a
+                        >
+                        with your code editor of choice.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </section>
+        <section class="row dash-row">
+          <div class="col-lg-7 col-md-6 col-sm-12 content-image">
+            <img
+              class="galleryFour dash-align-left"
+              src="assets/dash/svg/3-1-aot-compile.svg"
+              alt="Compiling dart file"
+            />
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-12 content-info">
+            <div class="content-container">
+              <div class="content-icon">
+                <img
+                  src="assets/dash/2x/client-optimized-light-op1.png"
+                  alt="Client optimized"
+                />
+              </div>
+              <div class="content-feature">Fast on all platforms</div>
+              <div class="content-desc" id="galleryFour">
+                <ul class="selector">
+                  <li
+                    class="highlight"
+                    data-banner="assets/dash/svg/3-1-aot-compile.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        <a href="overview.html#native-platform">AOT-compile</a>
+                        apps to native machine code for
+                        <a href="https://github.com/timsneath/time"
+                          >instant startup</a
+                        >.
+                      </div>
+                    </div>
+                  </li>
+                  <li data-banner="assets/dash/svg/3-2-target-web.svg">
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Target the web with complete, mature, fast
+                        <a href="overview.html#web-platform"
+                          >compilers for JavaScript & WebAssembly</a
+                        >.
+                      </div>
+                    </div>
+                  </li>
+                  <li data-banner="assets/dash/svg/3-3-backend-code.svg">
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Run
+                        <a href="tutorials/server/httpserver.html"
+                          >backend code</a
+                        >
+                        supporting your app, written using a single programming
+                        language.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        class="dart-dash-details container-fluid d-none d-sm-none d-md-block"
+      >
+        <section class="row dash-row">
+          <div class="col-lg-5 col-md-6 col-sm-12 content-info">
+            <div class="content-container dash-align-right">
+              <div class="content-icon">
+                <img
+                  src="assets/dash/2x/multiplatform-performance-light-op1.png"
+                  alt="Multiplatform performance"
+                />
+              </div>
+              <div class="content-feature">Accesible</div>
+              <div class="content-desc" id="galleryOne">
+                <ul class="selector">
+                  <li
+                    class="highlight"
+                    tabindex="0"
+                    data-banner="assets/dash/svg/1-1-async-await.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        <a href="libraries/async/async-await.html"
+                          >Async-await</a
+                        >
+                        maduro y completo para interfaces de usuario que
+                        contienen código controlado por eventos, combinado con
+                        <a href="language/concurrency.html"
+                          >concurrencia basada en aislamiento</a
+                        >.
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    tabindex="0"
+                    data-banner="assets/dash/svg/1-2-language-optimized.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Escriba código seguro y conciso utilizando funciones como
+                        <a href="null-safety.html">seguridad nula</a>,
+                        <a
+                          href="language/collections.html#control-flow-operators"
+                          >recoplicación de valores if</a
+                        >, y
+                        <a href="language/patterns.html">coincidencia de patrones</a>.
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    tabindex="0"
+                    data-banner="assets/dash/svg/1-3-familiar-syntax.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Un lenguaje de programación consistente, con una 
+                        sintaxis fácil de aprender y
+                        <a href="language.html">familiar</a>.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-12 content-image">
+            <img
+              class="galleryOne dash-align-left"
+              src="assets/dash/svg/1-1-async-await.svg"
+              alt="Async await functions "
+            />
+          </div>
+        </section>
+        <section class="row dash-row">
+          <div class="col-lg-7 col-md-6 col-sm-12 content-image">
+            <img
+              class="galleryTwo dash-align-right"
+              src="assets/dash/svg/2-1-hot-reload-iterative-changes.svg"
+              alt="Hot reload your changes"
+            />
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-12 content-info">
+            <div class="content-container dash-align-left">
+              <div class="content-icon">
+                <img
+                  src="assets/dash/2x/client-optimized-light-op1.png"
+                  alt="Productive development"
+                />
+              </div>
+              <div class="content-feature">Desarrollo productivo</div>
+              <div class="content-desc" id="galleryTwo">
+                <ul class="selector">
+                  <li
+                    class="highlight"
+                    tabindex="0"
+                    data-banner="assets/dash/svg/2-1-hot-reload-iterative-changes.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Realice cambios en su código fuente de forma iterativa,
+                        utilizando 
+                        <a href="https://docs.flutter.dev/tools/hot-reload"
+                          >la carga activa</a
+                        >
+                        para ver instantáneamente el efecto en la aplicación en ejecución.
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    tabindex="0"
+                    data-banner="assets/dash/svg/2-2-flexible-type.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Escriba código utilizando un sistema de tipos flexible con
+                        análisis estático enriquecido y
+                        <a href="tools/analysis.html">herramientas potentes y configurables</a>.
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    tabindex="0"
+                    data-banner="assets/dash/svg/2-3-runtime-insight.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Realice
+                        <a
+                          href="https://docs.flutter.dev/tools/devtools/performance"
+                          >perfiles</a
+                        >,
+                        <a
+                          href="https://docs.flutter.dev/tools/devtools/logging"
+                          >registros</a
+                        > y
+                        <a
+                          href="https://docs.flutter.dev/tools/devtools/debugger"
+                          >depuraciones</a
+                        >
+                        con el editor de código de su elección.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row dash-row">
+          <div class="col-lg-5 col-md-6 col-sm-12 content-info">
+            <div class="content-container dash-align-right">
+              <div class="content-icon">
+                <img
+                  src="assets/dash/2x/multiplatform-performance-light-op1.png"
+                  alt="Multiplatform performance"
+                />
+              </div>
+              <div class="content-feature">Rápido en todas las plataformas</div>
+              <div class="content-desc" id="galleryThree">
+                <ul class="selector">
+                  <li
+                    class="highlight"
+                    tabindex="0"
+                    data-banner="assets/dash/svg/3-3-backend-code.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        <a href="overview.html#native-platform">AOT</a>
+                        compila aplicaciones en código de máquina nativo par
+                        <a href="https://github.com/timsneath/time"
+                          >un inicio instantáneo</a
+                        >.
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    tabindex="0"
+                    data-banner="assets/dash/svg/3-2-target-web.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Apunte a la web con
+                        <a href="overview.html#web-platform"
+                          >compiladores completos, maduros y rápidos para JavaScript y WebAssembly</a
+                        >.
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    tabindex="0"
+                    data-banner="assets/dash/svg/3-1-aot-compile.svg"
+                  >
+                    <div>
+                      <div class="bullet-container">
+                        <div class="animated-bullet"></div>
+                      </div>
+                      <div class="bullet-text">
+                        Ejecute
+                        <a href="tutorials/server/httpserver.html"
+                          >código backend</a
+                        >
+                        que respalde su aplicación, escrito con un solo 
+                        lenguaje de programación.
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-12 content-image">
+            <img
+              class="galleryThree dash-align-left"
+              src="assets/dash/svg/3-1-aot-compile.svg"
+              alt="Compiling dart file"
+            />
+          </div>
+        </section>
+        <section class="row dash-dartpad-row">
+          <div class="dash-dartpad">
+            <a id="try-dart" class="frontanchor"></a>
+            <h2>Prueba Dart en tu navegador</h2>
+            <div id="dartpad-host">
+              <iframe
+                src="https://dartpad.dev/?theme=dark"
+                loading="lazy"
+              ></iframe>
+            </div>
+            <h3>
+              ¿Quieres practicar más?
+              <a href="language.html">Aprende el lenguaje</a>, explora las
+              <a href="libraries.html">librerias principales</a>, o
+              <a href="tutorials/server/get-started.html"
+                >crea una aplicación de línea de comandos</a
+              >.
+            </h3>
+          </div>
+        </section>
+      </div>
+      <div
+        class="modal fade"
+        data-video-modal
+        id="videoModal"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-lg"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="embedded-video-wrapper">
+                <div id="video-player"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="page-footer">
+      <div class="footer-section footer-main">
+        <a href="index.html" class="brand" title="Dart"
+          ><img
+            src="assets/img/logo/logo-white-text.svg"
+            alt="Dart"
+            width="164"
+        /></a>
+        <div class="footer-social-links">
+          <a
+            href="https://medium.com/dartlang"
+            target="_blank"
+            rel="noopener"
+            title="Medium blog"
+            ><svg>
+              <use href="assets/img/social/medium.svg#medium"></use>
+            </svg> </a
+          ><a
+            href="https://github.com/dart-lang"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+            ><svg>
+              <use href="assets/img/social/github.svg#github"></use>
+            </svg> </a
+          ><a
+            href="https://twitter.com/dart_lang"
+            target="_blank"
+            rel="noopener"
+            title="X (Twitter)"
+            ><svg><use href="assets/img/social/x.svg#x"></use></svg
+          ></a>
+        </div>
+      </div>
+      <div class="footer-section footer-tray">
+        <div class="footer-licenses">
+          Salvo que se indique lo contrario, este sitio está licenciado bajo una
+          <a href="https://creativecommons.org/licenses/by/4.0/"
+            >Licencia Internacional Creative Commons Atribución 4.0</a
+          > y los ejemplos de código están licenciados bajo la
+          <a href="https://opensource.org/licenses/BSD-3-Clause"
+            >Licencia 3-Clause BSD</a
+          >.
+        </div>
+        <div class="footer-utility-links">
+          <ul>
+            <li><a href="terms.html" title="Terms of use">Terminos</a></li>
+            <li>
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener"
+                title="Privacy policy"
+                >Privacidad</a
+              >
+            </li>
+            <li>
+              <a href="security.html" title="Security philosophy and practices"
+                >Seguridad</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- Mirrored from dart.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 30 Dec 2024 22:14:06 GMT -->
+</html>
